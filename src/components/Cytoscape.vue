@@ -6,6 +6,22 @@
 import Vue from "vue";
 import cytoscape from "cytoscape";
 
+import PAGINATION_GRAPH from "@/components/app-pagination.json";
+
+const NODES: cytoscape.NodeDefinition[] = PAGINATION_GRAPH.nodes.map(
+  (d): cytoscape.NodeDefinition => ({
+    data: d,
+  })
+);
+const EDGES: cytoscape.EdgeDefinition[] = PAGINATION_GRAPH.edges.map(
+  (d): cytoscape.EdgeDefinition => ({
+    data: {
+      source: d.from,
+      target: d.to,
+    },
+  })
+);
+
 export default Vue.extend({
   name: "Cytoscape",
 
@@ -14,12 +30,38 @@ export default Vue.extend({
     return {} as any as { cyInstance: cytoscape.Core };
   },
 
-  created() {
-    this.cyInstance = cytoscape();
-  },
-
   mounted() {
-    this.cyInstance.mount(this.$el);
+    this.cyInstance = cytoscape({
+      // headless: true,
+      container: this.$el as HTMLElement,
+
+      elements: {
+        nodes: NODES,
+        edges: EDGES,
+      },
+
+      style: [
+        // the stylesheet for the graph
+        {
+          selector: "node",
+          style: {
+            "background-color": "#666",
+            label: "data(id)",
+          },
+        },
+
+        {
+          selector: "edge",
+          style: {
+            width: 3,
+            "line-color": "#ccc",
+            "target-arrow-color": "#ccc",
+            "target-arrow-shape": "triangle",
+            "curve-style": "bezier",
+          },
+        },
+      ],
+    });
   },
 
   destroyed() {
@@ -28,4 +70,8 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.cytoscape-viz {
+  text-align: left;
+}
+</style>

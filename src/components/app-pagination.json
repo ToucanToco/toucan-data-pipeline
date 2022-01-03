@@ -1,0 +1,88 @@
+{
+  "nodes": [
+    {
+      "type": "provider",
+      "name": "test-uat-pagination",
+      "provider_type": "Snowflake",
+      "id": "provider:test-uat-pagination"
+    },
+    {
+      "type": "provider",
+      "name": "Postgres Toucan Scalway",
+      "provider_type": "Postgres",
+      "id": "provider:Postgres Toucan Scalway"
+    },
+    {
+      "type": "datasource",
+      "name": "stores.csv",
+      "id": "datasource:stores.csv"
+    },
+    {
+      "type": "domain",
+      "name": "stores",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:stores"
+    },
+    {
+      "type": "datasource",
+      "name": "indicators.csv",
+      "id": "datasource:indicators.csv"
+    },
+    {
+      "type": "domain",
+      "name": "store_indicators",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:store_indicators"
+    },
+    {
+      "type": "domain",
+      "name": "test",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:test"
+    },
+    {
+      "type": "domain",
+      "name": "tpchsuppliers",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:tpchsuppliers"
+    },
+    {
+      "type": "domain",
+      "name": "prepared-dataset-UAT",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:prepared-dataset-UAT"
+    },
+    {
+      "type": "story",
+      "story_id": 0,
+      "id": "story:0"
+    }
+  ],
+  "edges": [
+    {
+      "from": "datasource:stores.csv",
+      "to": "domain:stores"
+    },
+    {
+      "from": "datasource:indicators.csv",
+      "to": "domain:store_indicators"
+    },
+    {
+      "from": "provider:test-uat-pagination",
+      "to": "domain:test"
+    },
+    {
+      "from": "provider:Postgres Toucan Scalway",
+      "to": "domain:tpchsuppliers"
+    },
+    {
+      "from": "domain:store_indicators",
+      "to": "domain:prepared-dataset-UAT"
+    }
+  ]
+}
