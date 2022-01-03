@@ -5,8 +5,11 @@
 <script lang="ts">
 import Vue from "vue";
 import cytoscape from "cytoscape";
+import elk from "cytoscape-elk";
 
 import PAGINATION_GRAPH from "@/components/app-pagination.json";
+
+cytoscape.use(elk);
 
 const NODES: cytoscape.NodeDefinition[] = PAGINATION_GRAPH.nodes.map(
   (d): cytoscape.NodeDefinition => ({
@@ -61,6 +64,15 @@ export default Vue.extend({
           },
         },
       ],
+
+      layout: {
+        // @ts-ignore
+        name: "elk",
+        elk: {
+          algorithm: "layered",
+          "elk.direction": "RIGHT",
+        },
+      },
     });
   },
 
