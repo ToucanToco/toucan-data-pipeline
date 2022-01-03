@@ -9,10 +9,21 @@ import cytoscape from "cytoscape";
 export default Vue.extend({
   name: "Cytoscape",
 
+  data() {
+    // eslint-disable-next-line
+    return {} as any as { cyInstance: cytoscape.Core };
+  },
+
+  created() {
+    this.cyInstance = cytoscape();
+  },
+
   mounted() {
-    var cy = cytoscape({
-      container: this.$el,
-    });
+    this.cyInstance.mount(this.$el);
+  },
+
+  destroyed() {
+    this.cyInstance.destroy();
   },
 });
 </script>
