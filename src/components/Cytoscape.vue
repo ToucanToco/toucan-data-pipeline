@@ -3,13 +3,15 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { PropType } from "vue";
 import cytoscape from "cytoscape";
 import elk from "cytoscape-elk";
+import dagre from "cytoscape-dagre";
 
 import PAGINATION_GRAPH from "@/components/app-pagination.json";
 
 cytoscape.use(elk);
+cytoscape.use(dagre);
 
 const NODES: cytoscape.NodeDefinition[] = PAGINATION_GRAPH.nodes.map(
   (d): cytoscape.NodeDefinition => ({
@@ -25,8 +27,32 @@ const EDGES: cytoscape.EdgeDefinition[] = PAGINATION_GRAPH.edges.map(
   })
 );
 
+const LAYOUT_OPTIONS = {
+  breadthfirst: {
+    name: "breadthfirst",
+    directed: true,
+  },
+  elk: {
+    name: "elk",
+    elk: {
+      algorithm: "layered",
+      "elk.direction": "DOWN",
+    },
+  },
+  dagre: {
+    name: "dagre",
+  },
+};
+
 export default Vue.extend({
   name: "Cytoscape",
+
+  props: {
+    layout: {
+      type: String as PropType<"breadthfirst" | "elk" | "dagre">,
+      default: () => "breadthfirst",
+    },
+  },
 
   data() {
     // eslint-disable-next-line
@@ -65,14 +91,8 @@ export default Vue.extend({
         },
       ],
 
-      layout: {
-        // @ts-ignore
-        name: "elk",
-        elk: {
-          algorithm: "layered",
-          "elk.direction": "RIGHT",
-        },
-      },
+      // @ts-ignore
+      layout: LAYOUT_OPTIONS[this.layout],
     });
   },
 
