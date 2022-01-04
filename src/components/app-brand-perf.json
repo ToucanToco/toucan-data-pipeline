@@ -1,0 +1,1407 @@
+{
+  "nodes": [
+    {
+      "type": "datasource",
+      "name": "reports.csv",
+      "id": "datasource:reports.csv"
+    },
+    {
+      "type": "domain",
+      "name": "sample_reports",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:sample_reports"
+    },
+    {
+      "type": "datasource",
+      "name": "dashboards.csv",
+      "id": "datasource:dashboards.csv"
+    },
+    {
+      "type": "domain",
+      "name": "sample_dashboards",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:sample_dashboards"
+    },
+    {
+      "type": "datasource",
+      "name": "dates.csv",
+      "id": "datasource:dates.csv"
+    },
+    {
+      "type": "domain",
+      "name": "dates",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:dates"
+    },
+    {
+      "type": "datasource",
+      "name": "BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx",
+      "id": "datasource:BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "so_perf",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:so_perf"
+    },
+    {
+      "type": "datasource",
+      "name": "BDD MU US MOIS 2016-2017_74.xlsx",
+      "id": "datasource:BDD MU US MOIS 2016-2017_74.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "so_mu",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:so_mu"
+    },
+    {
+      "type": "datasource",
+      "name": "BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx",
+      "id": "datasource:BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "media_perf_input",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:media_perf_input"
+    },
+    {
+      "type": "datasource",
+      "name": "BDD Media make up US par marque.xlsx",
+      "id": "datasource:BDD Media make up US par marque.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "media_mu",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:media_mu"
+    },
+    {
+      "type": "datasource",
+      "name": "mapping_brand_media_so.xlsx",
+      "id": "datasource:mapping_brand_media_so.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "mapping_brand_media_so",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:mapping_brand_media_so"
+    },
+    {
+      "type": "datasource",
+      "name": "BDD pour sprint 2.xlsx",
+      "id": "datasource:BDD pour sprint 2.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "market_input",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:market_input"
+    },
+    {
+      "type": "datasource",
+      "name": "BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx",
+      "id": "datasource:BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "emv_2016",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:emv_2016"
+    },
+    {
+      "type": "datasource",
+      "name": "BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx",
+      "id": "datasource:BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "emv_2017",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:emv_2017"
+    },
+    {
+      "type": "datasource",
+      "name": "mapping_so_emv.xlsx",
+      "id": "datasource:mapping_so_emv.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "mapping_so_emv",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:mapping_so_emv"
+    },
+    {
+      "type": "datasource",
+      "name": "waterfall.xlsx",
+      "id": "datasource:waterfall.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "waterfall",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:waterfall"
+    },
+    {
+      "type": "datasource",
+      "name": "waterfall_segment.xlsx",
+      "id": "datasource:waterfall_segment.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "waterfall_segment",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:waterfall_segment"
+    },
+    {
+      "type": "datasource",
+      "name": "comment.xlsx",
+      "id": "datasource:comment.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "comment",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:comment"
+    },
+    {
+      "type": "datasource",
+      "name": "evol_croissance_market_vs_ll.xlsx",
+      "id": "datasource:evol_croissance_market_vs_ll.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "codir_growth_evol_vs_market",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:codir_growth_evol_vs_market"
+    },
+    {
+      "type": "datasource",
+      "name": "croissances_marche_ll.csv",
+      "id": "datasource:croissances_marche_ll.csv"
+    },
+    {
+      "type": "domain",
+      "name": "codir_growth_by_region",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:codir_growth_by_region"
+    },
+    {
+      "type": "datasource",
+      "name": "pdm_groupes_par_pays.csv",
+      "id": "datasource:pdm_groupes_par_pays.csv"
+    },
+    {
+      "type": "domain",
+      "name": "comex_pdm_groupes_par_pays",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:comex_pdm_groupes_par_pays"
+    },
+    {
+      "type": "datasource",
+      "name": "pdm_groupes_par_pays_drill.xlsx",
+      "id": "datasource:pdm_groupes_par_pays_drill.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "comex_pdm_groupes_par_pays_drill",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:comex_pdm_groupes_par_pays_drill"
+    },
+    {
+      "type": "datasource",
+      "name": "evol_sell_in_sell_out.xlsx",
+      "id": "datasource:evol_sell_in_sell_out.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "evol_sell_in_sell_out_europe1",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:evol_sell_in_sell_out_europe1"
+    },
+    {
+      "type": "datasource",
+      "name": "evol_sell_in_sell_out.xlsx",
+      "id": "datasource:evol_sell_in_sell_out.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "evol_sell_in_sell_out_europe2",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:evol_sell_in_sell_out_europe2"
+    },
+    {
+      "type": "datasource",
+      "name": "monthly_evol_sell_in_sell_out.xlsx",
+      "id": "datasource:monthly_evol_sell_in_sell_out.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "monthly_evol_sell_in_sell_out_input",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:monthly_evol_sell_in_sell_out_input"
+    },
+    {
+      "type": "datasource",
+      "name": "pdm_by_category.xlsx",
+      "id": "datasource:pdm_by_category.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "pdm_by_category",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:pdm_by_category"
+    },
+    {
+      "type": "datasource",
+      "name": "pdm_by_category.xlsx",
+      "id": "datasource:pdm_by_category.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "pdm_by_category_highlighted",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:pdm_by_category_highlighted"
+    },
+    {
+      "type": "datasource",
+      "name": "focus_performance.xlsx",
+      "id": "datasource:focus_performance.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "focus_performance_top",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:focus_performance_top"
+    },
+    {
+      "type": "datasource",
+      "name": "focus_performance.xlsx",
+      "id": "datasource:focus_performance.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "focus_performance_highlighted",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:focus_performance_highlighted"
+    },
+    {
+      "type": "domain",
+      "name": "market_tmp",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:market_tmp"
+    },
+    {
+      "type": "func",
+      "name": "augment_market_tmp",
+      "id": "func:augment_market_tmp"
+    },
+    {
+      "type": "domain",
+      "name": "market",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:market"
+    },
+    {
+      "type": "func",
+      "name": "augment_market",
+      "id": "func:augment_market"
+    },
+    {
+      "type": "domain",
+      "name": "market_segment",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:market_segment"
+    },
+    {
+      "type": "func",
+      "name": "augment_market_segment",
+      "id": "func:augment_market_segment"
+    },
+    {
+      "type": "domain",
+      "name": "so_segment_tmp",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:so_segment_tmp"
+    },
+    {
+      "type": "func",
+      "name": "augment_so_segment_tmp",
+      "id": "func:augment_so_segment_tmp"
+    },
+    {
+      "type": "domain",
+      "name": "so_segment",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:so_segment"
+    },
+    {
+      "type": "func",
+      "name": "augment_so_segment",
+      "id": "func:augment_so_segment"
+    },
+    {
+      "type": "domain",
+      "name": "so_prod_line",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:so_prod_line"
+    },
+    {
+      "type": "func",
+      "name": "augment_so_prod_line",
+      "id": "func:augment_so_prod_line"
+    },
+    {
+      "type": "domain",
+      "name": "media_perf",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:media_perf"
+    },
+    {
+      "type": "func",
+      "name": "augment_media",
+      "id": "func:augment_media"
+    },
+    {
+      "type": "domain",
+      "name": "sov",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:sov"
+    },
+    {
+      "type": "func",
+      "name": "augment_sov",
+      "id": "func:augment_sov"
+    },
+    {
+      "type": "domain",
+      "name": "emv",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:emv"
+    },
+    {
+      "type": "func",
+      "name": "augment_emv",
+      "id": "func:augment_emv"
+    },
+    {
+      "type": "domain",
+      "name": "perf_so_tmp",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:perf_so_tmp"
+    },
+    {
+      "type": "func",
+      "name": "prepare_perf_so",
+      "id": "func:prepare_perf_so"
+    },
+    {
+      "type": "domain",
+      "name": "mu_so_tmp",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:mu_so_tmp"
+    },
+    {
+      "type": "func",
+      "name": "prepare_mu_so",
+      "id": "func:prepare_mu_so"
+    },
+    {
+      "type": "domain",
+      "name": "perf_media_tmp",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:perf_media_tmp"
+    },
+    {
+      "type": "func",
+      "name": "prepare_perf_media",
+      "id": "func:prepare_perf_media"
+    },
+    {
+      "type": "domain",
+      "name": "mu_media_tmp",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:mu_media_tmp"
+    },
+    {
+      "type": "func",
+      "name": "prepare_mu_media",
+      "id": "func:prepare_mu_media"
+    },
+    {
+      "type": "domain",
+      "name": "df_emv_tmp",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:df_emv_tmp"
+    },
+    {
+      "type": "func",
+      "name": "prepare_emv",
+      "id": "func:prepare_emv"
+    },
+    {
+      "type": "domain",
+      "name": "full_so_media_emv",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:full_so_media_emv"
+    },
+    {
+      "type": "func",
+      "name": "augment_full_so_media_emv",
+      "id": "func:augment_full_so_media_emv"
+    },
+    {
+      "type": "domain",
+      "name": "stacked_detail_so_media_emv",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:stacked_detail_so_media_emv"
+    },
+    {
+      "type": "func",
+      "name": "augment_full_so_media_emv_stacked",
+      "id": "func:augment_full_so_media_emv_stacked"
+    },
+    {
+      "type": "domain",
+      "name": "top_perf_so_tmp",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:top_perf_so_tmp"
+    },
+    {
+      "type": "func",
+      "name": "augment_top_perf_so_tmp",
+      "id": "func:augment_top_perf_so_tmp"
+    },
+    {
+      "type": "domain",
+      "name": "top_perf_media_tmp",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:top_perf_media_tmp"
+    },
+    {
+      "type": "func",
+      "name": "augment_top_perf_media_tmp",
+      "id": "func:augment_top_perf_media_tmp"
+    },
+    {
+      "type": "domain",
+      "name": "top_perf_so",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:top_perf_so"
+    },
+    {
+      "type": "func",
+      "name": "augment_top_perf_so",
+      "id": "func:augment_top_perf_so"
+    },
+    {
+      "type": "domain",
+      "name": "top_perf_media",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:top_perf_media"
+    },
+    {
+      "type": "func",
+      "name": "augment_top_perf_media",
+      "id": "func:augment_top_perf_media"
+    },
+    {
+      "type": "domain",
+      "name": "top_perf_so_media",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:top_perf_so_media"
+    },
+    {
+      "type": "func",
+      "name": "augment_top_perf_so_media",
+      "id": "func:augment_top_perf_so_media"
+    },
+    {
+      "type": "domain",
+      "name": "top_emv",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:top_emv"
+    },
+    {
+      "type": "func",
+      "name": "augment_top_emv",
+      "id": "func:augment_top_emv"
+    },
+    {
+      "type": "domain",
+      "name": "evol_sell_in_sell_out",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:evol_sell_in_sell_out"
+    },
+    {
+      "type": "func",
+      "name": "augment_evol_sell_in_sell_out",
+      "id": "func:augment_evol_sell_in_sell_out"
+    },
+    {
+      "type": "domain",
+      "name": "monthly_evol_sell_in_sell_out",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:monthly_evol_sell_in_sell_out"
+    },
+    {
+      "type": "func",
+      "name": "augment_monthly_evol_sell_in_sell_out",
+      "id": "func:augment_monthly_evol_sell_in_sell_out"
+    },
+    {
+      "type": "story",
+      "story_id": 0,
+      "id": "story:0"
+    },
+    {
+      "type": "story",
+      "story_id": 16,
+      "id": "story:16"
+    },
+    {
+      "type": "story",
+      "story_id": 17,
+      "id": "story:17"
+    },
+    {
+      "type": "story",
+      "story_id": 18,
+      "id": "story:18"
+    },
+    {
+      "type": "story",
+      "story_id": 114,
+      "id": "story:114"
+    },
+    {
+      "type": "story",
+      "story_id": 13,
+      "id": "story:13"
+    },
+    {
+      "type": "story",
+      "story_id": 14,
+      "id": "story:14"
+    },
+    {
+      "type": "story",
+      "story_id": 102,
+      "id": "story:102"
+    },
+    {
+      "type": "story",
+      "story_id": 103,
+      "id": "story:103"
+    },
+    {
+      "type": "story",
+      "story_id": 112,
+      "id": "story:112"
+    },
+    {
+      "type": "story",
+      "story_id": 107,
+      "id": "story:107"
+    },
+    {
+      "type": "story",
+      "story_id": 110,
+      "id": "story:110"
+    },
+    {
+      "type": "story",
+      "story_id": 108,
+      "id": "story:108"
+    },
+    {
+      "type": "story",
+      "story_id": 109,
+      "id": "story:109"
+    },
+    {
+      "type": "story",
+      "story_id": 104,
+      "id": "story:104"
+    },
+    {
+      "type": "story",
+      "story_id": 105,
+      "id": "story:105"
+    },
+    {
+      "type": "story",
+      "story_id": 111,
+      "id": "story:111"
+    },
+    {
+      "type": "story",
+      "story_id": 106,
+      "id": "story:106"
+    },
+    {
+      "type": "story",
+      "story_id": 113,
+      "id": "story:113"
+    },
+    {
+      "type": "story",
+      "story_id": 1007,
+      "id": "story:1007"
+    },
+    {
+      "type": "story",
+      "story_id": 1008,
+      "id": "story:1008"
+    },
+    {
+      "type": "story",
+      "story_id": 1009,
+      "id": "story:1009"
+    },
+    {
+      "type": "story",
+      "story_id": 1001,
+      "id": "story:1001"
+    },
+    {
+      "type": "story",
+      "story_id": 1030,
+      "id": "story:1030"
+    },
+    {
+      "type": "story",
+      "story_id": 1031,
+      "id": "story:1031"
+    },
+    {
+      "type": "story",
+      "story_id": 1004,
+      "id": "story:1004"
+    },
+    {
+      "type": "story",
+      "story_id": 1005,
+      "id": "story:1005"
+    },
+    {
+      "type": "story",
+      "story_id": 1006,
+      "id": "story:1006"
+    },
+    {
+      "type": "story",
+      "story_id": 1032,
+      "id": "story:1032"
+    },
+    {
+      "type": "story",
+      "story_id": 1033,
+      "id": "story:1033"
+    },
+    {
+      "type": "story",
+      "story_id": 1026,
+      "id": "story:1026"
+    },
+    {
+      "type": "story",
+      "story_id": 1027,
+      "id": "story:1027"
+    },
+    {
+      "type": "story",
+      "story_id": 1028,
+      "id": "story:1028"
+    },
+    {
+      "type": "story",
+      "story_id": 1048,
+      "id": "story:1048"
+    },
+    {
+      "type": "story",
+      "story_id": 1036,
+      "id": "story:1036"
+    },
+    {
+      "type": "story",
+      "story_id": 1037,
+      "id": "story:1037"
+    },
+    {
+      "type": "story",
+      "story_id": 1038,
+      "id": "story:1038"
+    },
+    {
+      "type": "story",
+      "story_id": 1039,
+      "id": "story:1039"
+    },
+    {
+      "type": "story",
+      "story_id": 1040,
+      "id": "story:1040"
+    },
+    {
+      "type": "story",
+      "story_id": 1041,
+      "id": "story:1041"
+    },
+    {
+      "type": "story",
+      "story_id": 1400,
+      "id": "story:1400"
+    },
+    {
+      "type": "story",
+      "story_id": 1015,
+      "id": "story:1015"
+    },
+    {
+      "type": "story",
+      "story_id": 1016,
+      "id": "story:1016"
+    },
+    {
+      "type": "story",
+      "story_id": 1017,
+      "id": "story:1017"
+    },
+    {
+      "type": "story",
+      "story_id": 1020,
+      "id": "story:1020"
+    },
+    {
+      "type": "story",
+      "story_id": 1021,
+      "id": "story:1021"
+    },
+    {
+      "type": "story",
+      "story_id": 1022,
+      "id": "story:1022"
+    },
+    {
+      "type": "story",
+      "story_id": 1023,
+      "id": "story:1023"
+    },
+    {
+      "type": "story",
+      "story_id": 1024,
+      "id": "story:1024"
+    },
+    {
+      "type": "story",
+      "story_id": 1043,
+      "id": "story:1043"
+    },
+    {
+      "type": "story",
+      "story_id": 1045,
+      "id": "story:1045"
+    },
+    {
+      "type": "story",
+      "story_id": 1046,
+      "id": "story:1046"
+    },
+    {
+      "type": "story",
+      "story_id": 1047,
+      "id": "story:1047"
+    }
+  ],
+  "edges": [
+    {
+      "from": "datasource:reports.csv",
+      "to": "domain:sample_reports"
+    },
+    {
+      "from": "datasource:dashboards.csv",
+      "to": "domain:sample_dashboards"
+    },
+    {
+      "from": "datasource:dates.csv",
+      "to": "domain:dates"
+    },
+    {
+      "from": "datasource:BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx",
+      "to": "domain:so_perf"
+    },
+    {
+      "from": "datasource:BDD MU US MOIS 2016-2017_74.xlsx",
+      "to": "domain:so_mu"
+    },
+    {
+      "from": "datasource:BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx",
+      "to": "domain:media_perf_input"
+    },
+    {
+      "from": "datasource:BDD Media make up US par marque.xlsx",
+      "to": "domain:media_mu"
+    },
+    {
+      "from": "datasource:mapping_brand_media_so.xlsx",
+      "to": "domain:mapping_brand_media_so"
+    },
+    {
+      "from": "datasource:BDD pour sprint 2.xlsx",
+      "to": "domain:market_input"
+    },
+    {
+      "from": "datasource:BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx",
+      "to": "domain:emv_2016"
+    },
+    {
+      "from": "datasource:BDD PARFUM FEMME USA 2016-2017 PAR MOIS TRANSPOSE.xlsx",
+      "to": "domain:emv_2017"
+    },
+    {
+      "from": "datasource:mapping_so_emv.xlsx",
+      "to": "domain:mapping_so_emv"
+    },
+    {
+      "from": "datasource:waterfall.xlsx",
+      "to": "domain:waterfall"
+    },
+    {
+      "from": "datasource:waterfall_segment.xlsx",
+      "to": "domain:waterfall_segment"
+    },
+    {
+      "from": "datasource:comment.xlsx",
+      "to": "domain:comment"
+    },
+    {
+      "from": "datasource:evol_croissance_market_vs_ll.xlsx",
+      "to": "domain:codir_growth_evol_vs_market"
+    },
+    {
+      "from": "datasource:croissances_marche_ll.csv",
+      "to": "domain:codir_growth_by_region"
+    },
+    {
+      "from": "datasource:pdm_groupes_par_pays.csv",
+      "to": "domain:comex_pdm_groupes_par_pays"
+    },
+    {
+      "from": "datasource:pdm_groupes_par_pays_drill.xlsx",
+      "to": "domain:comex_pdm_groupes_par_pays_drill"
+    },
+    {
+      "from": "datasource:evol_sell_in_sell_out.xlsx",
+      "to": "domain:evol_sell_in_sell_out_europe1"
+    },
+    {
+      "from": "datasource:evol_sell_in_sell_out.xlsx",
+      "to": "domain:evol_sell_in_sell_out_europe2"
+    },
+    {
+      "from": "datasource:monthly_evol_sell_in_sell_out.xlsx",
+      "to": "domain:monthly_evol_sell_in_sell_out_input"
+    },
+    {
+      "from": "datasource:pdm_by_category.xlsx",
+      "to": "domain:pdm_by_category"
+    },
+    {
+      "from": "datasource:pdm_by_category.xlsx",
+      "to": "domain:pdm_by_category_highlighted"
+    },
+    {
+      "from": "datasource:focus_performance.xlsx",
+      "to": "domain:focus_performance_top"
+    },
+    {
+      "from": "datasource:focus_performance.xlsx",
+      "to": "domain:focus_performance_highlighted"
+    },
+    {
+      "from": "domain:market_input",
+      "to": "func:augment_market_tmp"
+    },
+    {
+      "from": "func:augment_market_tmp",
+      "to": "domain:market_tmp"
+    },
+    {
+      "from": "domain:market_tmp",
+      "to": "func:augment_market"
+    },
+    {
+      "from": "func:augment_market",
+      "to": "domain:market"
+    },
+    {
+      "from": "domain:market_tmp",
+      "to": "func:augment_market_segment"
+    },
+    {
+      "from": "func:augment_market_segment",
+      "to": "domain:market_segment"
+    },
+    {
+      "from": "domain:so_perf",
+      "to": "func:augment_so_segment_tmp"
+    },
+    {
+      "from": "domain:so_mu",
+      "to": "func:augment_so_segment_tmp"
+    },
+    {
+      "from": "func:augment_so_segment_tmp",
+      "to": "domain:so_segment_tmp"
+    },
+    {
+      "from": "domain:so_segment_tmp",
+      "to": "func:augment_so_segment"
+    },
+    {
+      "from": "func:augment_so_segment",
+      "to": "domain:so_segment"
+    },
+    {
+      "from": "domain:so_segment_tmp",
+      "to": "func:augment_so_prod_line"
+    },
+    {
+      "from": "func:augment_so_prod_line",
+      "to": "domain:so_prod_line"
+    },
+    {
+      "from": "domain:media_perf_input",
+      "to": "func:augment_media"
+    },
+    {
+      "from": "domain:mapping_brand_media_so",
+      "to": "func:augment_media"
+    },
+    {
+      "from": "func:augment_media",
+      "to": "domain:media_perf"
+    },
+    {
+      "from": "domain:media_perf",
+      "to": "func:augment_sov"
+    },
+    {
+      "from": "func:augment_sov",
+      "to": "domain:sov"
+    },
+    {
+      "from": "domain:emv_2016",
+      "to": "func:augment_emv"
+    },
+    {
+      "from": "domain:emv_2017",
+      "to": "func:augment_emv"
+    },
+    {
+      "from": "domain:mapping_so_emv",
+      "to": "func:augment_emv"
+    },
+    {
+      "from": "func:augment_emv",
+      "to": "domain:emv"
+    },
+    {
+      "from": "domain:so_perf",
+      "to": "func:prepare_perf_so"
+    },
+    {
+      "from": "func:prepare_perf_so",
+      "to": "domain:perf_so_tmp"
+    },
+    {
+      "from": "domain:so_mu",
+      "to": "func:prepare_mu_so"
+    },
+    {
+      "from": "func:prepare_mu_so",
+      "to": "domain:mu_so_tmp"
+    },
+    {
+      "from": "domain:media_perf_input",
+      "to": "func:prepare_perf_media"
+    },
+    {
+      "from": "domain:mapping_brand_media_so",
+      "to": "func:prepare_perf_media"
+    },
+    {
+      "from": "func:prepare_perf_media",
+      "to": "domain:perf_media_tmp"
+    },
+    {
+      "from": "domain:media_mu",
+      "to": "func:prepare_mu_media"
+    },
+    {
+      "from": "domain:mapping_brand_media_so",
+      "to": "func:prepare_mu_media"
+    },
+    {
+      "from": "func:prepare_mu_media",
+      "to": "domain:mu_media_tmp"
+    },
+    {
+      "from": "domain:emv_2016",
+      "to": "func:prepare_emv"
+    },
+    {
+      "from": "domain:emv_2017",
+      "to": "func:prepare_emv"
+    },
+    {
+      "from": "domain:mapping_so_emv",
+      "to": "func:prepare_emv"
+    },
+    {
+      "from": "func:prepare_emv",
+      "to": "domain:df_emv_tmp"
+    },
+    {
+      "from": "domain:perf_so_tmp",
+      "to": "func:augment_full_so_media_emv"
+    },
+    {
+      "from": "domain:mu_so_tmp",
+      "to": "func:augment_full_so_media_emv"
+    },
+    {
+      "from": "domain:perf_media_tmp",
+      "to": "func:augment_full_so_media_emv"
+    },
+    {
+      "from": "domain:mu_media_tmp",
+      "to": "func:augment_full_so_media_emv"
+    },
+    {
+      "from": "domain:df_emv_tmp",
+      "to": "func:augment_full_so_media_emv"
+    },
+    {
+      "from": "func:augment_full_so_media_emv",
+      "to": "domain:full_so_media_emv"
+    },
+    {
+      "from": "domain:perf_so_tmp",
+      "to": "func:augment_full_so_media_emv_stacked"
+    },
+    {
+      "from": "domain:mu_so_tmp",
+      "to": "func:augment_full_so_media_emv_stacked"
+    },
+    {
+      "from": "domain:perf_media_tmp",
+      "to": "func:augment_full_so_media_emv_stacked"
+    },
+    {
+      "from": "domain:mu_media_tmp",
+      "to": "func:augment_full_so_media_emv_stacked"
+    },
+    {
+      "from": "domain:df_emv_tmp",
+      "to": "func:augment_full_so_media_emv_stacked"
+    },
+    {
+      "from": "func:augment_full_so_media_emv_stacked",
+      "to": "domain:stacked_detail_so_media_emv"
+    },
+    {
+      "from": "domain:so_perf",
+      "to": "func:augment_top_perf_so_tmp"
+    },
+    {
+      "from": "func:augment_top_perf_so_tmp",
+      "to": "domain:top_perf_so_tmp"
+    },
+    {
+      "from": "domain:media_perf_input",
+      "to": "func:augment_top_perf_media_tmp"
+    },
+    {
+      "from": "domain:mapping_brand_media_so",
+      "to": "func:augment_top_perf_media_tmp"
+    },
+    {
+      "from": "func:augment_top_perf_media_tmp",
+      "to": "domain:top_perf_media_tmp"
+    },
+    {
+      "from": "domain:top_perf_so_tmp",
+      "to": "func:augment_top_perf_so"
+    },
+    {
+      "from": "func:augment_top_perf_so",
+      "to": "domain:top_perf_so"
+    },
+    {
+      "from": "domain:top_perf_media_tmp",
+      "to": "func:augment_top_perf_media"
+    },
+    {
+      "from": "func:augment_top_perf_media",
+      "to": "domain:top_perf_media"
+    },
+    {
+      "from": "domain:top_perf_so_tmp",
+      "to": "func:augment_top_perf_so_media"
+    },
+    {
+      "from": "domain:top_perf_media_tmp",
+      "to": "func:augment_top_perf_so_media"
+    },
+    {
+      "from": "domain:top_perf_so",
+      "to": "func:augment_top_perf_so_media"
+    },
+    {
+      "from": "domain:top_perf_media",
+      "to": "func:augment_top_perf_so_media"
+    },
+    {
+      "from": "func:augment_top_perf_so_media",
+      "to": "domain:top_perf_so_media"
+    },
+    {
+      "from": "domain:emv_2016",
+      "to": "func:augment_top_emv"
+    },
+    {
+      "from": "domain:emv_2017",
+      "to": "func:augment_top_emv"
+    },
+    {
+      "from": "domain:mapping_so_emv",
+      "to": "func:augment_top_emv"
+    },
+    {
+      "from": "func:augment_top_emv",
+      "to": "domain:top_emv"
+    },
+    {
+      "from": "domain:evol_sell_in_sell_out_europe1",
+      "to": "func:augment_evol_sell_in_sell_out"
+    },
+    {
+      "from": "domain:evol_sell_in_sell_out_europe2",
+      "to": "func:augment_evol_sell_in_sell_out"
+    },
+    {
+      "from": "func:augment_evol_sell_in_sell_out",
+      "to": "domain:evol_sell_in_sell_out"
+    },
+    {
+      "from": "domain:monthly_evol_sell_in_sell_out_input",
+      "to": "func:augment_monthly_evol_sell_in_sell_out"
+    },
+    {
+      "from": "func:augment_monthly_evol_sell_in_sell_out",
+      "to": "domain:monthly_evol_sell_in_sell_out"
+    },
+    {
+      "from": "domain:waterfall",
+      "to": "story:1007"
+    },
+    {
+      "from": "domain:waterfall_segment",
+      "to": "story:1008"
+    },
+    {
+      "from": "domain:waterfall_segment",
+      "to": "story:1009"
+    },
+    {
+      "from": "domain:so_prod_line",
+      "to": "story:1001"
+    },
+    {
+      "from": "domain:so_segment",
+      "to": "story:1001"
+    },
+    {
+      "from": "domain:so_segment",
+      "to": "story:1030"
+    },
+    {
+      "from": "domain:so_segment",
+      "to": "story:1031"
+    },
+    {
+      "from": "domain:so_prod_line",
+      "to": "story:1004"
+    },
+    {
+      "from": "domain:so_segment",
+      "to": "story:1005"
+    },
+    {
+      "from": "domain:so_segment",
+      "to": "story:1006"
+    },
+    {
+      "from": "domain:so_segment",
+      "to": "story:1032"
+    },
+    {
+      "from": "domain:so_segment",
+      "to": "story:1033"
+    },
+    {
+      "from": "domain:top_perf_so",
+      "to": "story:1026"
+    },
+    {
+      "from": "domain:top_perf_media",
+      "to": "story:1027"
+    },
+    {
+      "from": "domain:top_emv",
+      "to": "story:1028"
+    },
+    {
+      "from": "domain:top_perf_so_media",
+      "to": "story:1048"
+    },
+    {
+      "from": "domain:full_so_media_emv",
+      "to": "story:1036"
+    },
+    {
+      "from": "domain:full_so_media_emv",
+      "to": "story:1037"
+    },
+    {
+      "from": "domain:full_so_media_emv",
+      "to": "story:1038"
+    },
+    {
+      "from": "domain:full_so_media_emv",
+      "to": "story:1039"
+    },
+    {
+      "from": "domain:stacked_detail_so_media_emv",
+      "to": "story:1040"
+    },
+    {
+      "from": "domain:stacked_detail_so_media_emv",
+      "to": "story:1041"
+    },
+    {
+      "from": "domain:market_segment",
+      "to": "story:1400"
+    },
+    {
+      "from": "domain:market_segment",
+      "to": "story:1015"
+    },
+    {
+      "from": "domain:market_segment",
+      "to": "story:1016"
+    },
+    {
+      "from": "domain:market_segment",
+      "to": "story:1017"
+    },
+    {
+      "from": "domain:codir_growth_evol_vs_market",
+      "to": "story:1020"
+    },
+    {
+      "from": "domain:codir_growth_by_region",
+      "to": "story:1021"
+    },
+    {
+      "from": "domain:comex_pdm_groupes_par_pays",
+      "to": "story:1022"
+    },
+    {
+      "from": "domain:comex_pdm_groupes_par_pays",
+      "to": "story:1023"
+    },
+    {
+      "from": "domain:comex_pdm_groupes_par_pays_drill",
+      "to": "story:1024"
+    },
+    {
+      "from": "domain:evol_sell_in_sell_out",
+      "to": "story:1043"
+    },
+    {
+      "from": "domain:monthly_evol_sell_in_sell_out",
+      "to": "story:1045"
+    },
+    {
+      "from": "domain:pdm_by_category_highlighted",
+      "to": "story:1046"
+    },
+    {
+      "from": "domain:pdm_by_category",
+      "to": "story:1046"
+    },
+    {
+      "from": "domain:focus_performance_highlighted",
+      "to": "story:1047"
+    },
+    {
+      "from": "domain:focus_performance_top",
+      "to": "story:1047"
+    }
+  ]
+}
