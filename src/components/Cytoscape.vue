@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import Vue, {PropType} from "vue";
+import Vue, { PropType } from "vue";
 import cytoscape from "cytoscape";
 import cola from "cytoscape-cola";
 
@@ -71,62 +71,63 @@ export default Vue.extend({
       this.cyInstance.add({
         nodes: this.graph.nodes.map((d): cytoscape.NodeDefinition => {
           return {
-            data: Object.freeze({...d}),
+            data: Object.freeze({ ...d }),
           };
         }),
         edges: this.graph.edges.map(
-            (d): cytoscape.EdgeDefinition => ({
-              data: {
-                source: Object.freeze(d.from),
-                target: Object.freeze(d.to),
-              },
-            })
+          (d): cytoscape.EdgeDefinition => ({
+            data: {
+              source: Object.freeze(d.from),
+              target: Object.freeze(d.to),
+            },
+          })
         ),
       });
 
       this.cyInstance
-          .layout({
-            name: "cola",
-            // @ts-ignore
-            animate: false,
-            maxSimulationTime: 4000,
+        .layout({
+          name: "cola",
+          // @ts-ignore
+          animate: false,
+          maxSimulationTime: 4000,
 
-            // @ts-ignore
-            flow: {axis: "x", minSeparation: 250},
-            nodeDimensionsIncludeLabels: true,
+          // @ts-ignore
+          flow: { axis: "x", minSeparation: 250 },
+          nodeDimensionsIncludeLabels: true,
 
-            // @ts-ignore
-            alignment: {
-              vertical: [
-                // All providers and datasources should be aligned to the left
-                this.cyInstance
-                    .nodes()
-                    .filter((n) =>
-                        ["provider", "datasource"].includes(n.data("type"))
-                    )
-                    .map((n) => ({node: n, offset: 0})),
-              ],
-            },
-
-            gapInequalities: [
-              // Stories must be at the right side of providers and datasources
-              ...this.cyInstance
-                  .filter('node[type = "story"]')
-                  .flatMap((storyNode) => {
-                    return this.cyInstance
-                        .filter('node[type = "datasource"],node[type = "provider"]')
-                        .map((sourceNode) => {
-                          return {
-                            axis: "x",
-                            left: sourceNode,
-                            right: storyNode,
-                            gap: 500,
-                          };
-                        });
-                  }),
+          // @ts-ignore
+          alignment: {
+            vertical: [
+              // All providers and datasources should be aligned to the left
+              this.cyInstance
+                .nodes()
+                .filter((n) =>
+                  ["provider", "datasource"].includes(n.data("type"))
+                )
+                .map((n) => ({ node: n, offset: 0 })),
             ],
-          })
-          .run();
+          },
+
+          gapInequalities: [
+            // Stories must be at the right side of providers and datasources
+            ...this.cyInstance
+              .filter('node[type = "story"]')
+              // @ts-ignore
+              .flatMap((storyNode) => {
+                return this.cyInstance
+                  .filter('node[type = "datasource"],node[type = "provider"]')
+                  .map((sourceNode) => {
+                    return {
+                      axis: "x",
+                      left: sourceNode,
+                      right: storyNode,
+                      gap: 500,
+                    };
+                  });
+              }),
+          ],
+        })
+        .run();
     },
   },
 });
