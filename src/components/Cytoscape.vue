@@ -65,6 +65,8 @@ export default Vue.extend({
             "target-arrow-color": "#ccc",
             "target-arrow-shape": "triangle",
             "curve-style": "taxi",
+            "taxi-direction": "rightward",
+            "taxi-turn-min-distance": "25px"
           },
         },
       ],
