@@ -5,20 +5,16 @@
 <script lang="ts">
 import Vue, { PropType } from "vue";
 import cytoscape from "cytoscape";
-import elk from "cytoscape-elk";
-import dagre from "cytoscape-dagre";
+import cola from "cytoscape-cola";
 
 import PAGINATION_GRAPH from "@/components/app-pagination.json";
 
-cytoscape.use(elk);
-cytoscape.use(dagre);
+cytoscape.use(cola);
 
 const NODES: cytoscape.NodeDefinition[] = PAGINATION_GRAPH.nodes.map(
   (d, i): cytoscape.NodeDefinition => {
     return {
       data: d,
-      position: ['provider', 'datasource'].includes(d.type) ? { x: 0, y: i * 100 } : undefined,
-      locked: ['provider', 'datasource'].includes(d.type)
     };
   }
 );
@@ -31,32 +27,8 @@ const EDGES: cytoscape.EdgeDefinition[] = PAGINATION_GRAPH.edges.map(
   })
 );
 
-const LAYOUT_OPTIONS = {
-  breadthfirst: {
-    name: "breadthfirst",
-    directed: true,
-  },
-  elk: {
-    name: "elk",
-    elk: {
-      algorithm: "layered",
-      "elk.direction": "RIGHT",
-    },
-  },
-  dagre: {
-    name: "dagre",
-  },
-};
-
 export default Vue.extend({
   name: "Cytoscape",
-
-  props: {
-    layout: {
-      type: String as PropType<"breadthfirst" | "elk" | "dagre">,
-      default: () => "breadthfirst",
-    },
-  },
 
   data() {
     // eslint-disable-next-line
@@ -80,7 +52,6 @@ export default Vue.extend({
           style: {
             width: "50px",
             shape: "round-rectangle",
-            padding: "20px",
             "background-color": "#666",
             label: "data(id)",
           },
@@ -98,9 +69,33 @@ export default Vue.extend({
         },
       ],
 
-      // @ts-ignore
-      layout: LAYOUT_OPTIONS[this.layout],
+      // layout: LAYOUT_OPTIONS[this.layout],
     });
+
+    this.cyInstance
+      .layout({
+        name: "cola",
+        // @ts-ignore
+        animate: false,
+
+        // @ts-ignore
+        flow: { axis: "x", minSeparation: 250 },
+        nodeDimensionsIncludeLabels: true,
+
+        // @ts-ignore
+        alignment: {
+          vertical: [
+            // All providers and datasources should be aligned to the left
+            this.cyInstance
+              .nodes()
+              .filter((n) =>
+                ["provider", "datasource"].includes(n.data("type"))
+              )
+              .map((n) => ({ node: n, offset: 0 })),
+          ],
+        },
+      })
+      .run();
   },
 
   destroyed() {
