@@ -5,7 +5,7 @@
     <!--      :graph="BRAND_PERF_GRAPH"-->
     <!--      class="app-data-pipeline__viz"-->
     <!--    ></Cytoscape>-->
-    <Dagre :graph="PAGINATION_GRAPH"></Dagre>
+    <Dagre :graph="BRAND_PERF_GRAPH"></Dagre>
   </div>
 </template>
 

@@ -1,5 +1,21 @@
 <template>
-  <div class="graph">
+  <div
+    class="graph"
+    :style="{
+      height: height + 'px',
+      width: width + 'px',
+      flex: width && height ? 'none' : undefined,
+    }"
+  >
+    <Edge
+      class="edge"
+      v-for="e in edges"
+      :key="e.key"
+      :x1="e.x1"
+      :y1="e.y1"
+      :x2="e.x2"
+      :y2="e.y2"
+    ></Edge>
     <Node
       class="node"
       :x="n.x"
@@ -7,7 +23,7 @@
       :label="n.label"
       :key="n.id"
       v-for="n in nodes"
-      :style="{top: (n.y - 60/2) + 'px', left: (n.x - 150/2) + 'px'}"
+      :style="{ top: n.y - 60 / 2 + 'px', left: n.x - 150 / 2 + 'px' }"
     ></Node>
   </div>
 </template>
@@ -17,12 +33,14 @@ import Vue, { PropType } from "vue";
 import dagre from "dagre";
 
 import Node from "./Node.vue";
+import Edge from "./Edge.vue";
 
 export default Vue.extend({
   name: "Dagre",
 
   components: {
     Node,
+    Edge,
   },
 
   props: {
@@ -36,20 +54,34 @@ export default Vue.extend({
 
   data(): {
     dagreGraph: dagre.graphlib.Graph;
-    nodes: { x: number; y: number }[];
+    nodes: { x: number; y: number; id: string; label: string }[];
+    edges: { x1: number; y1: number; x2: number; y2: number; id: string }[];
+    height?: number;
+    width?: number;
   } {
-    // eslint-disable-next-line
     return {
       nodes: [],
+      edges: [],
+      height: undefined,
+      width: undefined,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any as {
       dagreGraph: dagre.graphlib.Graph;
-      nodes: { x: number; y: number }[];
+      nodes: { x: number; y: number; id: string; label: string }[];
+      edges: { x1: number; y1: number; x2: number; y2: number; id: string }[];
+      height?: number;
+      width?: number;
     };
   },
 
   created() {
     this.dagreGraph = new dagre.graphlib.Graph();
-    this.dagreGraph.setGraph({});
+    this.dagreGraph.setGraph({
+      rankdir: "LR",
+      align: "UL",
+      marginx: 20,
+      // ranker: "tight-tree",
+    });
 
     this.dagreGraph.setDefaultEdgeLabel(function () {
       return {};
@@ -72,17 +104,29 @@ export default Vue.extend({
 
     dagre.layout(this.dagreGraph);
 
-    this.nodes = this.dagreGraph
-      .nodes()
-      .map((id) => {
-        const n = this.dagreGraph.node(id);
-        return {
-          x: n.x,
-          y: n.y,
-          id: id,
-          label: n.label,
-        };
-      });
+    this.height = this.dagreGraph.graph().height;
+    this.width = this.dagreGraph.graph().width;
+
+    this.nodes = this.dagreGraph.nodes().map((id) => {
+      const n = this.dagreGraph.node(id);
+      return {
+        x: n.x,
+        y: n.y,
+        id: id,
+        label: n.label as string,
+      };
+    });
+
+    this.edges = this.dagreGraph.edges().map((id) => {
+      const e = this.dagreGraph.edge(id);
+      return {
+        x1: e.points[0].x,
+        y1: e.points[0].y,
+        x2: e.points[e.points.length - 1].x,
+        y2: e.points[e.points.length - 1].y,
+        id: id.v + "->" + id.w,
+      };
+    });
   },
 });
 </script>
@@ -94,7 +138,15 @@ export default Vue.extend({
   position: relative;
 }
 
-.node {
+.node,
+.edge {
   position: absolute;
+}
+
+.edge {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 </style>

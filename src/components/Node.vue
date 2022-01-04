@@ -8,7 +8,7 @@
 export default {
   name: "Node",
 
-  props: ['label', 'x', 'y']
+  props: ["label", "x", "y"],
 };
 </script>
 
