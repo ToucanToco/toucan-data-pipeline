@@ -14,9 +14,13 @@ cytoscape.use(elk);
 cytoscape.use(dagre);
 
 const NODES: cytoscape.NodeDefinition[] = PAGINATION_GRAPH.nodes.map(
-  (d): cytoscape.NodeDefinition => ({
-    data: d,
-  })
+  (d, i): cytoscape.NodeDefinition => {
+    return {
+      data: d,
+      position: ['provider', 'datasource'].includes(d.type) ? { x: 0, y: i * 100 } : undefined,
+      locked: ['provider', 'datasource'].includes(d.type)
+    };
+  }
 );
 const EDGES: cytoscape.EdgeDefinition[] = PAGINATION_GRAPH.edges.map(
   (d): cytoscape.EdgeDefinition => ({
@@ -36,7 +40,7 @@ const LAYOUT_OPTIONS = {
     name: "elk",
     elk: {
       algorithm: "layered",
-      "elk.direction": "DOWN",
+      "elk.direction": "RIGHT",
     },
   },
   dagre: {
@@ -74,6 +78,9 @@ export default Vue.extend({
         {
           selector: "node",
           style: {
+            width: "50px",
+            shape: "round-rectangle",
+            padding: "20px",
             "background-color": "#666",
             label: "data(id)",
           },
@@ -86,7 +93,7 @@ export default Vue.extend({
             "line-color": "#ccc",
             "target-arrow-color": "#ccc",
             "target-arrow-shape": "triangle",
-            "curve-style": "bezier",
+            "curve-style": "taxi",
           },
         },
       ],

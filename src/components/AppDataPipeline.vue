@@ -1,7 +1,7 @@
 <template>
   <div class="app-data-pipeline">
     <h1>App data pipeline</h1>
-    <Cytoscape class="app-data-pipeline__viz"></Cytoscape>
+    <Cytoscape layout="elk" class="app-data-pipeline__viz"></Cytoscape>
   </div>
 </template>
 
