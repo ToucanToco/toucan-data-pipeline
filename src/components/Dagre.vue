@@ -22,11 +22,12 @@
       :x="n.x"
       :y="n.y"
       :label="n.label"
+      :type="n.type"
       :key="n.id"
       v-for="n in nodes"
       :style="{
-        top: n.y - 60 / 2 + 'px',
-        left: n.x - 150 / 2 + 'px',
+        top: n.y - (NODE_TYPES[n.type] || NODE_TYPES.unknown).height / 2 + 'px',
+        left: n.x - (NODE_TYPES[n.type] || NODE_TYPES.unknown).width / 2 + 'px',
         opacity: hasHighlighedNode ? (n.highlighted ? 1 : 0.5) : 1,
       }"
       @mouseenter.native="highlightNode(n.id)"
@@ -41,6 +42,7 @@ import dagre from "dagre";
 
 import Node from "./Node.vue";
 import Edge from "./Edge.vue";
+import NODE_TYPES from "./node-types";
 
 export default Vue.extend({
   name: "Dagre",
@@ -53,7 +55,11 @@ export default Vue.extend({
   props: {
     graph: {
       type: Object as PropType<{
-        nodes: { type: string; name: string; id: string }[];
+        nodes: {
+          type: "datasource" | "provider" | "domain" | "story";
+          name: string;
+          id: string;
+        }[];
         edges: { from: string; to: string }[];
       }>,
     },
@@ -61,11 +67,13 @@ export default Vue.extend({
 
   data(): {
     dagreGraph: dagre.graphlib.Graph;
+    NODE_TYPES: typeof NODE_TYPES;
     nodes: {
       x: number;
       y: number;
       id: string;
       label: string;
+      type: "datasource" | "provider" | "domain" | "story" | "unknown";
       highlighted: boolean;
     }[];
     edges: {
@@ -78,6 +86,7 @@ export default Vue.extend({
     width?: number;
   } {
     return {
+      NODE_TYPES: NODE_TYPES,
       nodes: [],
       edges: [],
       height: undefined,
@@ -85,11 +94,14 @@ export default Vue.extend({
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any as {
       dagreGraph: dagre.graphlib.Graph;
+      NODE_TYPES: typeof NODE_TYPES;
+
       nodes: {
         x: number;
         y: number;
         id: string;
         label: string;
+        type: "datasource" | "provider" | "domain" | "story" | "unknown";
         highlighted: boolean;
       }[];
       edges: {
@@ -124,7 +136,11 @@ export default Vue.extend({
     });
 
     this.graph.nodes.forEach((n) => {
-      this.dagreGraph.setNode(n.id, { label: n.name, width: 150, height: 60 });
+      this.dagreGraph.setNode(n.id, {
+        label: n.name,
+        width: (NODE_TYPES[n.type] || NODE_TYPES.unknown).width,
+        height: (NODE_TYPES[n.type] || NODE_TYPES.unknown).height,
+      });
     });
 
     this.graph.edges.forEach((e) => {
@@ -144,12 +160,14 @@ export default Vue.extend({
     this.width = this.dagreGraph.graph().width;
 
     this.nodes = this.dagreGraph.nodes().map((id) => {
-      const n = this.dagreGraph.node(id);
+      const n = this.dagreGraph.node(id); // In layout graph
+      const d = this.graph.nodes.find((d) => d.id == id); // In provided data
       return {
         x: n.x,
         y: n.y,
         id: id,
         label: n.label as string,
+        type: d ? d.type : "unknown",
         highlighted: false,
       };
     });
@@ -178,7 +196,6 @@ export default Vue.extend({
 
   methods: {
     resetHighlight() {
-      console.log("resetHighlight");
       this.nodes.forEach((n) => (n.highlighted = false));
       this.edges.forEach((n) => (n.highlighted = false));
     },
@@ -210,6 +227,7 @@ export default Vue.extend({
   width: 100%;
   height: 100%;
   position: relative;
+  background-color: #f5f6fa;
 }
 
 .node,
