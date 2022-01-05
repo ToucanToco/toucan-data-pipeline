@@ -215,6 +215,7 @@ export default Vue.extend({
 .node,
 .edge {
   position: absolute;
+  transition: opacity 100ms;
 }
 
 .edge {
