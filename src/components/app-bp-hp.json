@@ -1,0 +1,1035 @@
+{
+  "nodes": [
+    {
+      "type": "provider",
+      "name": "FakeDataProvider",
+      "provider_type": "HttpAPI",
+      "id": "provider:FakeDataProvider"
+    },
+    {
+      "type": "datasource",
+      "name": "fichier test Données EPS 2015 2019.xls",
+      "id": "datasource:fichier test Données EPS 2015 2019.xls"
+    },
+    {
+      "type": "domain",
+      "name": "fichier test Données EPS 2015 2019",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:fichier test Données EPS 2015 2019"
+    },
+    {
+      "type": "datasource",
+      "name": "referentiel_regions.xlsx",
+      "id": "datasource:referentiel_regions.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "referentiel_regions",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:referentiel_regions"
+    },
+    {
+      "type": "datasource",
+      "name": "TERRITOIRE.xlsx",
+      "id": "datasource:TERRITOIRE.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "TERRITOIRE",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:TERRITOIRE"
+    },
+    {
+      "type": "datasource",
+      "name": "M21_2019_SIREN_unique.csv",
+      "id": "datasource:M21_2019_SIREN_unique.csv"
+    },
+    {
+      "type": "domain",
+      "name": "M21_2019_SIREN_unique",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:M21_2019_SIREN_unique"
+    },
+    {
+      "type": "datasource",
+      "name": "{{ secrets.extra.ftp_toucan.baseroute }}/datas_EPS_etape1 (2).xlsx",
+      "id": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/datas_EPS_etape1 (2).xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "datas_EPS_etape1",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:datas_EPS_etape1"
+    },
+    {
+      "type": "datasource",
+      "name": "{{ secrets.extra.ftp_toucan.baseroute }}/M21_.*.csv",
+      "id": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/M21_.*.csv"
+    },
+    {
+      "type": "domain",
+      "name": "M21_2019",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:M21_2019"
+    },
+    {
+      "type": "datasource",
+      "name": "APMi - Recherche avancée-1626441119707.xlsx",
+      "id": "datasource:APMi - Recherche avancée-1626441119707.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "APMi",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:APMi"
+    },
+    {
+      "type": "domain",
+      "name": "__fake_data__",
+      "load": false,
+      "is_prepared_dataset": false,
+      "id": "domain:__fake_data__"
+    },
+    {
+      "type": "domain",
+      "name": "compte_16449",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:compte_16449"
+    },
+    {
+      "type": "domain",
+      "name": "data_hopitaux",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:data_hopitaux"
+    },
+    {
+      "type": "domain",
+      "name": "data_hopitaux_SIREN_unique",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:data_hopitaux_SIREN_unique"
+    },
+    {
+      "type": "domain",
+      "name": "Data_test",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:Data_test"
+    },
+    {
+      "type": "domain",
+      "name": "population_territoire",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:population_territoire"
+    },
+    {
+      "type": "domain",
+      "name": "migac",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:migac"
+    },
+    {
+      "type": "domain",
+      "name": "tarification_sejours_mco",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:tarification_sejours_mco"
+    },
+    {
+      "type": "domain",
+      "name": "indicateurs_hopitaux_calcules",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "type": "domain",
+      "name": "dotation_annuelle_fi",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:dotation_annuelle_fi"
+    },
+    {
+      "type": "domain",
+      "name": "charges_de_personnel",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:charges_de_personnel"
+    },
+    {
+      "type": "domain",
+      "name": "total_charges_fonctionnement",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:total_charges_fonctionnement"
+    },
+    {
+      "type": "domain",
+      "name": "charges_financieres",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:charges_financieres"
+    },
+    {
+      "type": "domain",
+      "name": "charges_interet",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:charges_interet"
+    },
+    {
+      "type": "domain",
+      "name": "Total_produits_fonctionnement",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:Total_produits_fonctionnement"
+    },
+    {
+      "type": "domain",
+      "name": "autres_recettes",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:autres_recettes"
+    },
+    {
+      "type": "domain",
+      "name": "autres_depenses",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:autres_depenses"
+    },
+    {
+      "type": "domain",
+      "name": "data_doc_travail",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:data_doc_travail"
+    },
+    {
+      "type": "domain",
+      "name": "marge_brute",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:marge_brute"
+    },
+    {
+      "type": "domain",
+      "name": "taux_marge_brute",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:taux_marge_brute"
+    },
+    {
+      "type": "domain",
+      "name": "resultat_net_bis",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:resultat_net_bis"
+    },
+    {
+      "type": "domain",
+      "name": "caf",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:caf"
+    },
+    {
+      "type": "domain",
+      "name": "CAF_NETTE",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:CAF_NETTE"
+    },
+    {
+      "type": "domain",
+      "name": "TAUX_CAF",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:TAUX_CAF"
+    },
+    {
+      "type": "domain",
+      "name": "TOTAL_DEPENSE_INVESTISSEMENT",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:TOTAL_DEPENSE_INVESTISSEMENT"
+    },
+    {
+      "type": "domain",
+      "name": "DEPENSE_EQUIPEMENT",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:DEPENSE_EQUIPEMENT"
+    },
+    {
+      "type": "domain",
+      "name": "fluxnet_dette",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:fluxnet_dette"
+    },
+    {
+      "type": "domain",
+      "name": "TOTAL_RECETTE",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:TOTAL_RECETTE"
+    },
+    {
+      "type": "domain",
+      "name": "EMPRUNT",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:EMPRUNT"
+    },
+    {
+      "type": "domain",
+      "name": "Dotation_subvention_investissement",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:Dotation_subvention_investissement"
+    },
+    {
+      "type": "domain",
+      "name": "ENCOURS_DETTE",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:ENCOURS_DETTE"
+    },
+    {
+      "type": "domain",
+      "name": "TAUX_ENDETTEMENT",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:TAUX_ENDETTEMENT"
+    },
+    {
+      "type": "domain",
+      "name": "TAUX_INTERET_DETTE",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:TAUX_INTERET_DETTE"
+    },
+    {
+      "type": "domain",
+      "name": "TRESORERIE",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:TRESORERIE"
+    },
+    {
+      "type": "domain",
+      "name": "Tresorerie_nb_jours",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:Tresorerie_nb_jours"
+    },
+    {
+      "type": "domain",
+      "name": "duree_apparente_Dette",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:duree_apparente_Dette"
+    },
+    {
+      "type": "domain",
+      "name": "Indépendance_financière",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:Indépendance_financière"
+    },
+    {
+      "type": "domain",
+      "name": "taux_vetuste_construction",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:taux_vetuste_construction"
+    },
+    {
+      "type": "domain",
+      "name": "taux_vetuste_equipement",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:taux_vetuste_equipement"
+    },
+    {
+      "type": "domain",
+      "name": "tresorerie_active",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:tresorerie_active"
+    },
+    {
+      "type": "domain",
+      "name": "tresorerie_active_passive",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:tresorerie_active_passive"
+    },
+    {
+      "type": "domain",
+      "name": "tresorerie_nombre_jours_depenses_fonctionnement",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:tresorerie_nombre_jours_depenses_fonctionnement"
+    },
+    {
+      "type": "domain",
+      "name": "delai_rotation_dette_fournisseur",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:delai_rotation_dette_fournisseur"
+    },
+    {
+      "type": "domain",
+      "name": "taux_amortissement",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:taux_amortissement"
+    },
+    {
+      "type": "domain",
+      "name": "REMBOURSEMENT_DETTE",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:REMBOURSEMENT_DETTE"
+    },
+    {
+      "type": "domain",
+      "name": "fond_roulement",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:fond_roulement"
+    },
+    {
+      "type": "domain",
+      "name": "besoin_fond_roulement",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:besoin_fond_roulement"
+    },
+    {
+      "type": "domain",
+      "name": "Dotation_hopitaux_proximite",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:Dotation_hopitaux_proximite"
+    },
+    {
+      "type": "domain",
+      "name": "PRODUITS_SSR",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:PRODUITS_SSR"
+    },
+    {
+      "type": "domain",
+      "name": "PRODUITS_PATIENTS_COMPLEMENTAIRES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:PRODUITS_PATIENTS_COMPLEMENTAIRES"
+    },
+    {
+      "type": "story",
+      "story_id": 0,
+      "id": "story:0"
+    },
+    {
+      "type": "story",
+      "story_id": 692481,
+      "id": "story:692481"
+    },
+    {
+      "type": "story",
+      "story_id": 71453,
+      "id": "story:71453"
+    },
+    {
+      "type": "story",
+      "story_id": 95824041,
+      "id": "story:95824041"
+    },
+    {
+      "type": "story",
+      "story_id": 936859,
+      "id": "story:936859"
+    },
+    {
+      "type": "story",
+      "story_id": 745834,
+      "id": "story:745834"
+    },
+    {
+      "type": "story",
+      "story_id": 27242003,
+      "id": "story:27242003"
+    },
+    {
+      "type": "story",
+      "story_id": 42345260,
+      "id": "story:42345260"
+    },
+    {
+      "type": "story",
+      "story_id": 988589,
+      "id": "story:988589"
+    },
+    {
+      "type": "story",
+      "story_id": 67756,
+      "id": "story:67756"
+    },
+    {
+      "type": "story",
+      "story_id": 26196,
+      "id": "story:26196"
+    },
+    {
+      "type": "story",
+      "story_id": 9236771,
+      "id": "story:9236771"
+    },
+    {
+      "type": "story",
+      "story_id": 57037884,
+      "id": "story:57037884"
+    },
+    {
+      "type": "story",
+      "story_id": 826982,
+      "id": "story:826982"
+    },
+    {
+      "type": "story",
+      "story_id": 816580,
+      "id": "story:816580"
+    },
+    {
+      "type": "story",
+      "story_id": 50503558,
+      "id": "story:50503558"
+    },
+    {
+      "type": "story",
+      "story_id": 34081334,
+      "id": "story:34081334"
+    },
+    {
+      "type": "story",
+      "story_id": 49078091,
+      "id": "story:49078091"
+    },
+    {
+      "type": "story",
+      "story_id": 20858880,
+      "id": "story:20858880"
+    },
+    {
+      "type": "story",
+      "story_id": 919977,
+      "id": "story:919977"
+    },
+    {
+      "type": "story",
+      "story_id": 405887,
+      "id": "story:405887"
+    },
+    {
+      "type": "story",
+      "story_id": 81915003,
+      "id": "story:81915003"
+    },
+    {
+      "type": "story",
+      "story_id": 35623658,
+      "id": "story:35623658"
+    },
+    {
+      "type": "story",
+      "story_id": 13599184,
+      "id": "story:13599184"
+    },
+    {
+      "type": "story",
+      "story_id": 75711484,
+      "id": "story:75711484"
+    }
+  ],
+  "edges": [
+    {
+      "from": "datasource:fichier test Données EPS 2015 2019.xls",
+      "to": "domain:fichier test Données EPS 2015 2019"
+    },
+    {
+      "from": "datasource:referentiel_regions.xlsx",
+      "to": "domain:referentiel_regions"
+    },
+    {
+      "from": "datasource:TERRITOIRE.xlsx",
+      "to": "domain:TERRITOIRE"
+    },
+    {
+      "from": "datasource:M21_2019_SIREN_unique.csv",
+      "to": "domain:M21_2019_SIREN_unique"
+    },
+    {
+      "from": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/datas_EPS_etape1 (2).xlsx",
+      "to": "domain:datas_EPS_etape1"
+    },
+    {
+      "from": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/M21_.*.csv",
+      "to": "domain:M21_2019"
+    },
+    {
+      "from": "datasource:APMi - Recherche avancée-1626441119707.xlsx",
+      "to": "domain:APMi"
+    },
+    {
+      "from": "provider:FakeDataProvider",
+      "to": "domain:__fake_data__"
+    },
+    {
+      "from": "domain:M21_2019",
+      "to": "domain:compte_16449"
+    },
+    {
+      "from": "domain:M21_2019",
+      "to": "domain:data_hopitaux"
+    },
+    {
+      "from": "domain:population_territoire",
+      "to": "domain:data_hopitaux"
+    },
+    {
+      "from": "domain:APMi",
+      "to": "domain:data_hopitaux"
+    },
+    {
+      "from": "domain:referentiel_regions",
+      "to": "domain:data_hopitaux"
+    },
+    {
+      "from": "domain:M21_2019_SIREN_unique",
+      "to": "domain:data_hopitaux_SIREN_unique"
+    },
+    {
+      "from": "domain:APMi",
+      "to": "domain:data_hopitaux_SIREN_unique"
+    },
+    {
+      "from": "domain:population_territoire",
+      "to": "domain:data_hopitaux_SIREN_unique"
+    },
+    {
+      "from": "domain:referentiel_regions",
+      "to": "domain:data_hopitaux_SIREN_unique"
+    },
+    {
+      "from": "domain:fichier test Données EPS 2015 2019",
+      "to": "domain:Data_test"
+    },
+    {
+      "from": "domain:TERRITOIRE",
+      "to": "domain:population_territoire"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:migac"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:tarification_sejours_mco"
+    },
+    {
+      "from": "domain:TAUX_ENDETTEMENT",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:dotation_annuelle_fi",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:migac",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:charges_interet",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:TOTAL_DEPENSE_INVESTISSEMENT",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:tresorerie_active",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:PRODUITS_SSR",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:duree_apparente_Dette",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:tresorerie_nombre_jours_depenses_fonctionnement",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:TAUX_INTERET_DETTE",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:TOTAL_RECETTE",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:REMBOURSEMENT_DETTE",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:DEPENSE_EQUIPEMENT",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:charges_financieres",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:Indépendance_financière",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:taux_marge_brute",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:delai_rotation_dette_fournisseur",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:tarification_sejours_mco",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:total_charges_fonctionnement",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:charges_de_personnel",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:Dotation_subvention_investissement",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:taux_vetuste_equipement",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:ENCOURS_DETTE",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:taux_amortissement",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:Tresorerie_nb_jours",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:PRODUITS_PATIENTS_COMPLEMENTAIRES",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:EMPRUNT",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:autres_depenses",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:CAF_NETTE",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:marge_brute",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:taux_vetuste_construction",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:tresorerie_active_passive",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:Dotation_hopitaux_proximite",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:TAUX_CAF",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:Total_produits_fonctionnement",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:autres_recettes",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:compte_16449",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:caf",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:resultat_net_bis",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:TRESORERIE",
+      "to": "domain:indicateurs_hopitaux_calcules"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:dotation_annuelle_fi"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:charges_de_personnel"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:total_charges_fonctionnement"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:charges_financieres"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:charges_interet"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:Total_produits_fonctionnement"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:autres_recettes"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:autres_depenses"
+    },
+    {
+      "from": "domain:fichier test Données EPS 2015 2019",
+      "to": "domain:data_doc_travail"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:marge_brute"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:taux_marge_brute"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:resultat_net_bis"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:caf"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:CAF_NETTE"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:TAUX_CAF"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:TOTAL_DEPENSE_INVESTISSEMENT"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:DEPENSE_EQUIPEMENT"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:fluxnet_dette"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:TOTAL_RECETTE"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:EMPRUNT"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:Dotation_subvention_investissement"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:ENCOURS_DETTE"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:TAUX_ENDETTEMENT"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:TAUX_INTERET_DETTE"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:TRESORERIE"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:Tresorerie_nb_jours"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:duree_apparente_Dette"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:Indépendance_financière"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:taux_vetuste_construction"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:taux_vetuste_equipement"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:tresorerie_active"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:tresorerie_active_passive"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:tresorerie_nombre_jours_depenses_fonctionnement"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:delai_rotation_dette_fournisseur"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:taux_amortissement"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:REMBOURSEMENT_DETTE"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:fond_roulement"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:besoin_fond_roulement"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:Dotation_hopitaux_proximite"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:PRODUITS_SSR"
+    },
+    {
+      "from": "domain:data_hopitaux",
+      "to": "domain:PRODUITS_PATIENTS_COMPLEMENTAIRES"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:95824041"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:27242003"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:42345260"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:9236771"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:57037884"
+    },
+    {
+      "from": "domain:datas_EPS_etape1",
+      "to": "story:50503558"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:50503558"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:34081334"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:49078091"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:20858880"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:81915003"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:35623658"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:13599184"
+    },
+    {
+      "from": "domain:indicateurs_hopitaux_calcules",
+      "to": "story:75711484"
+    }
+  ]
+}

@@ -1,0 +1,706 @@
+{
+  "nodes": [
+    {
+      "type": "datasource",
+      "name": "{{ secrets.extra.ftp_toucan.baseroute }}/sabena_technics/BI-ACHATS/DATASET_FACTURES.csv",
+      "id": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/sabena_technics/BI-ACHATS/DATASET_FACTURES.csv"
+    },
+    {
+      "type": "domain",
+      "name": "DATASET_FACTURES",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:DATASET_FACTURES"
+    },
+    {
+      "type": "datasource",
+      "name": "{{ secrets.extra.ftp_toucan.baseroute }}/sabena_technics/BI-ACHATS/DATASET_LITIGES.csv",
+      "id": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/sabena_technics/BI-ACHATS/DATASET_LITIGES.csv"
+    },
+    {
+      "type": "domain",
+      "name": "DATASET_LITIGES",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:DATASET_LITIGES"
+    },
+    {
+      "type": "datasource",
+      "name": "type.xlsx",
+      "id": "datasource:type.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "type",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:type"
+    },
+    {
+      "type": "datasource",
+      "name": "{{ secrets.extra.ftp_toucan.baseroute }}/sabena_technics/BI-ACHATS/DATASET_COMMANDES.csv",
+      "id": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/sabena_technics/BI-ACHATS/DATASET_COMMANDES.csv"
+    },
+    {
+      "type": "domain",
+      "name": "DATASET_COMMANDES_2",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:DATASET_COMMANDES_2"
+    },
+    {
+      "type": "datasource",
+      "name": "Equipe_DNR.xlsx",
+      "id": "datasource:Equipe_DNR.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "S01_REMPLISSAGE_CHAMPS_DATE_03",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:S01_REMPLISSAGE_CHAMPS_DATE_03"
+    },
+    {
+      "type": "datasource",
+      "name": "Liste des PN sous contrat V11.xlsx",
+      "id": "datasource:Liste des PN sous contrat V11.xlsx"
+    },
+    {
+      "type": "domain",
+      "name": "S03_COUVERTURE_CONTRAT_ACHAT_V02",
+      "load": true,
+      "is_prepared_dataset": false,
+      "id": "domain:S03_COUVERTURE_CONTRAT_ACHAT_V02"
+    },
+    {
+      "type": "domain",
+      "name": "A00_RAW_DATASET_FACTURES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:A00_RAW_DATASET_FACTURES"
+    },
+    {
+      "type": "domain",
+      "name": "A01_RAW_DATASET_FACTURES_TEST",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:A01_RAW_DATASET_FACTURES_TEST"
+    },
+    {
+      "type": "domain",
+      "name": "B00_FACTURES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:B00_FACTURES"
+    },
+    {
+      "type": "domain",
+      "name": "H00_FACTURES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H00_FACTURES"
+    },
+    {
+      "type": "domain",
+      "name": "Z00_REQUESTER_DATE",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:Z00_REQUESTER_DATE"
+    },
+    {
+      "type": "domain",
+      "name": "Z00_REQUESTER_FRS",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:Z00_REQUESTER_FRS"
+    },
+    {
+      "type": "domain",
+      "name": "H01_FACTURES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H01_FACTURES"
+    },
+    {
+      "type": "domain",
+      "name": "H02_FACTURES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H02_FACTURES"
+    },
+    {
+      "type": "domain",
+      "name": "B01_FACTURES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:B01_FACTURES"
+    },
+    {
+      "type": "domain",
+      "name": "A00_RAW_DATASET_COMMANDES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:A00_RAW_DATASET_COMMANDES"
+    },
+    {
+      "type": "domain",
+      "name": "A01_RAW_DATASET_COMMANDES_TEST",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:A01_RAW_DATASET_COMMANDES_TEST"
+    },
+    {
+      "type": "domain",
+      "name": "B00_COMMANDES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:B00_COMMANDES"
+    },
+    {
+      "type": "domain",
+      "name": "H00_COMMANDES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H00_COMMANDES"
+    },
+    {
+      "type": "domain",
+      "name": "H01_COMMANDES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H01_COMMANDES"
+    },
+    {
+      "type": "domain",
+      "name": "H02_COMMANDES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H02_COMMANDES"
+    },
+    {
+      "type": "domain",
+      "name": "B01_COMMANDES_OTD",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:B01_COMMANDES_OTD"
+    },
+    {
+      "type": "domain",
+      "name": "H00_COMMANDES_OTD",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H00_COMMANDES_OTD"
+    },
+    {
+      "type": "domain",
+      "name": "H01_COMMANDES_OTD",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H01_COMMANDES_OTD"
+    },
+    {
+      "type": "domain",
+      "name": "H02_COMMANDES_OTD",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H02_COMMANDES_OTD"
+    },
+    {
+      "type": "domain",
+      "name": "A00_RAW_DATASET_LITIGES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:A00_RAW_DATASET_LITIGES"
+    },
+    {
+      "type": "domain",
+      "name": "A01_RAW_DATASET_LITIGES_TEST",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:A01_RAW_DATASET_LITIGES_TEST"
+    },
+    {
+      "type": "domain",
+      "name": "B00_LITIGES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:B00_LITIGES"
+    },
+    {
+      "type": "domain",
+      "name": "H00_LITIGES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H00_LITIGES"
+    },
+    {
+      "type": "domain",
+      "name": "H03_COMMANDES_OQD",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H03_COMMANDES_OQD"
+    },
+    {
+      "type": "domain",
+      "name": "H03_LITIGES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H03_LITIGES"
+    },
+    {
+      "type": "domain",
+      "name": "H01_LITIGES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H01_LITIGES"
+    },
+    {
+      "type": "domain",
+      "name": "H02_LITIGES",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H02_LITIGES"
+    },
+    {
+      "type": "domain",
+      "name": "H01_COMMANDES_TOTAL_FRS_OTD",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H01_COMMANDES_TOTAL_FRS_OTD"
+    },
+    {
+      "type": "domain",
+      "name": "H01_LITIGES_TOTAL_FRS",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:H01_LITIGES_TOTAL_FRS"
+    },
+    {
+      "type": "domain",
+      "name": "S01_REMPLISSAGE_CHAMPS_DATE_01",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:S01_REMPLISSAGE_CHAMPS_DATE_01"
+    },
+    {
+      "type": "domain",
+      "name": "B00_COMMANDES_ACHAT",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:B00_COMMANDES_ACHAT"
+    },
+    {
+      "type": "domain",
+      "name": "B01_COMMANDES_OTD_TABLECHART",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:B01_COMMANDES_OTD_TABLECHART"
+    },
+    {
+      "type": "domain",
+      "name": "S02_EVOLUTION-OTD_V01",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:S02_EVOLUTION-OTD_V01"
+    },
+    {
+      "type": "domain",
+      "name": "S01_REMPLISSAGE_CHAMPS_DATE_04",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:S01_REMPLISSAGE_CHAMPS_DATE_04"
+    },
+    {
+      "type": "domain",
+      "name": "S01_REMPLISSAGE_CHAMPS_DATE_05",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:S01_REMPLISSAGE_CHAMPS_DATE_05"
+    },
+    {
+      "type": "domain",
+      "name": "S03_COUVERTURE_CONTRAT_ACHAT_V01",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:S03_COUVERTURE_CONTRAT_ACHAT_V01"
+    },
+    {
+      "type": "domain",
+      "name": "S03_COUVERTURE_CONTRAT_ACHAT_V03",
+      "load": true,
+      "is_prepared_dataset": true,
+      "id": "domain:S03_COUVERTURE_CONTRAT_ACHAT_V03"
+    },
+    {
+      "type": "story",
+      "story_id": 0,
+      "id": "story:0"
+    },
+    {
+      "type": "story",
+      "story_id": 497238,
+      "id": "story:497238"
+    },
+    {
+      "type": "story",
+      "story_id": 757794,
+      "id": "story:757794"
+    },
+    {
+      "type": "story",
+      "story_id": 71369433,
+      "id": "story:71369433"
+    },
+    {
+      "type": "story",
+      "story_id": 36134915,
+      "id": "story:36134915"
+    },
+    {
+      "type": "story",
+      "story_id": 60166453,
+      "id": "story:60166453"
+    },
+    {
+      "type": "story",
+      "story_id": 79313362,
+      "id": "story:79313362"
+    },
+    {
+      "type": "story",
+      "story_id": 3483211,
+      "id": "story:3483211"
+    },
+    {
+      "type": "story",
+      "story_id": 62404476,
+      "id": "story:62404476"
+    },
+    {
+      "type": "story",
+      "story_id": 85929451,
+      "id": "story:85929451"
+    },
+    {
+      "type": "story",
+      "story_id": 165944,
+      "id": "story:165944"
+    },
+    {
+      "type": "story",
+      "story_id": 33831531,
+      "id": "story:33831531"
+    },
+    {
+      "type": "story",
+      "story_id": 63581389,
+      "id": "story:63581389"
+    },
+    {
+      "type": "story",
+      "story_id": 98010296,
+      "id": "story:98010296"
+    },
+    {
+      "type": "story",
+      "story_id": 57415511,
+      "id": "story:57415511"
+    },
+    {
+      "type": "story",
+      "story_id": 13742198,
+      "id": "story:13742198"
+    },
+    {
+      "type": "story",
+      "story_id": 52406568,
+      "id": "story:52406568"
+    }
+  ],
+  "edges": [
+    {
+      "from": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/sabena_technics/BI-ACHATS/DATASET_FACTURES.csv",
+      "to": "domain:DATASET_FACTURES"
+    },
+    {
+      "from": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/sabena_technics/BI-ACHATS/DATASET_LITIGES.csv",
+      "to": "domain:DATASET_LITIGES"
+    },
+    {
+      "from": "datasource:type.xlsx",
+      "to": "domain:type"
+    },
+    {
+      "from": "datasource:{{ secrets.extra.ftp_toucan.baseroute }}/sabena_technics/BI-ACHATS/DATASET_COMMANDES.csv",
+      "to": "domain:DATASET_COMMANDES_2"
+    },
+    {
+      "from": "datasource:Equipe_DNR.xlsx",
+      "to": "domain:S01_REMPLISSAGE_CHAMPS_DATE_03"
+    },
+    {
+      "from": "datasource:Liste des PN sous contrat V11.xlsx",
+      "to": "domain:S03_COUVERTURE_CONTRAT_ACHAT_V02"
+    },
+    {
+      "from": "domain:DATASET_FACTURES",
+      "to": "domain:A00_RAW_DATASET_FACTURES"
+    },
+    {
+      "from": "domain:A00_RAW_DATASET_FACTURES",
+      "to": "domain:A01_RAW_DATASET_FACTURES_TEST"
+    },
+    {
+      "from": "domain:A00_RAW_DATASET_FACTURES",
+      "to": "domain:B00_FACTURES"
+    },
+    {
+      "from": "domain:B00_FACTURES",
+      "to": "domain:H00_FACTURES"
+    },
+    {
+      "from": "domain:H00_FACTURES",
+      "to": "domain:Z00_REQUESTER_DATE"
+    },
+    {
+      "from": "domain:H02_FACTURES",
+      "to": "domain:Z00_REQUESTER_FRS"
+    },
+    {
+      "from": "domain:H00_FACTURES",
+      "to": "domain:H01_FACTURES"
+    },
+    {
+      "from": "domain:H01_FACTURES",
+      "to": "domain:H02_FACTURES"
+    },
+    {
+      "from": "domain:H00_FACTURES",
+      "to": "domain:H02_FACTURES"
+    },
+    {
+      "from": "domain:B00_FACTURES",
+      "to": "domain:B01_FACTURES"
+    },
+    {
+      "from": "domain:DATASET_COMMANDES_2",
+      "to": "domain:A00_RAW_DATASET_COMMANDES"
+    },
+    {
+      "from": "domain:A00_RAW_DATASET_COMMANDES",
+      "to": "domain:A01_RAW_DATASET_COMMANDES_TEST"
+    },
+    {
+      "from": "domain:A00_RAW_DATASET_COMMANDES",
+      "to": "domain:B00_COMMANDES"
+    },
+    {
+      "from": "domain:B00_COMMANDES",
+      "to": "domain:H00_COMMANDES"
+    },
+    {
+      "from": "domain:H00_COMMANDES",
+      "to": "domain:H01_COMMANDES"
+    },
+    {
+      "from": "domain:H00_COMMANDES",
+      "to": "domain:H02_COMMANDES"
+    },
+    {
+      "from": "domain:H01_COMMANDES",
+      "to": "domain:H02_COMMANDES"
+    },
+    {
+      "from": "domain:B00_COMMANDES",
+      "to": "domain:B01_COMMANDES_OTD"
+    },
+    {
+      "from": "domain:B01_COMMANDES_OTD",
+      "to": "domain:H00_COMMANDES_OTD"
+    },
+    {
+      "from": "domain:H00_COMMANDES_OTD",
+      "to": "domain:H01_COMMANDES_OTD"
+    },
+    {
+      "from": "domain:H01_COMMANDES_OTD",
+      "to": "domain:H02_COMMANDES_OTD"
+    },
+    {
+      "from": "domain:H00_COMMANDES_OTD",
+      "to": "domain:H02_COMMANDES_OTD"
+    },
+    {
+      "from": "domain:H01_COMMANDES_TOTAL_FRS_OTD",
+      "to": "domain:H02_COMMANDES_OTD"
+    },
+    {
+      "from": "domain:DATASET_LITIGES",
+      "to": "domain:A00_RAW_DATASET_LITIGES"
+    },
+    {
+      "from": "domain:A00_RAW_DATASET_LITIGES",
+      "to": "domain:A01_RAW_DATASET_LITIGES_TEST"
+    },
+    {
+      "from": "domain:A00_RAW_DATASET_LITIGES",
+      "to": "domain:B00_LITIGES"
+    },
+    {
+      "from": "domain:B00_LITIGES",
+      "to": "domain:H00_LITIGES"
+    },
+    {
+      "from": "domain:H02_COMMANDES_OTD",
+      "to": "domain:H03_COMMANDES_OQD"
+    },
+    {
+      "from": "domain:H02_LITIGES",
+      "to": "domain:H03_LITIGES"
+    },
+    {
+      "from": "domain:H03_COMMANDES_OQD",
+      "to": "domain:H03_LITIGES"
+    },
+    {
+      "from": "domain:H00_LITIGES",
+      "to": "domain:H01_LITIGES"
+    },
+    {
+      "from": "domain:H01_LITIGES_TOTAL_FRS",
+      "to": "domain:H02_LITIGES"
+    },
+    {
+      "from": "domain:H00_LITIGES",
+      "to": "domain:H02_LITIGES"
+    },
+    {
+      "from": "domain:H01_LITIGES",
+      "to": "domain:H02_LITIGES"
+    },
+    {
+      "from": "domain:H00_COMMANDES_OTD",
+      "to": "domain:H01_COMMANDES_TOTAL_FRS_OTD"
+    },
+    {
+      "from": "domain:H00_LITIGES",
+      "to": "domain:H01_LITIGES_TOTAL_FRS"
+    },
+    {
+      "from": "domain:B00_COMMANDES",
+      "to": "domain:S01_REMPLISSAGE_CHAMPS_DATE_01"
+    },
+    {
+      "from": "domain:B00_COMMANDES",
+      "to": "domain:B00_COMMANDES_ACHAT"
+    },
+    {
+      "from": "domain:B01_COMMANDES_OTD",
+      "to": "domain:B01_COMMANDES_OTD_TABLECHART"
+    },
+    {
+      "from": "domain:B01_COMMANDES_OTD",
+      "to": "domain:S02_EVOLUTION-OTD_V01"
+    },
+    {
+      "from": "domain:S01_REMPLISSAGE_CHAMPS_DATE_03",
+      "to": "domain:S01_REMPLISSAGE_CHAMPS_DATE_04"
+    },
+    {
+      "from": "domain:S01_REMPLISSAGE_CHAMPS_DATE_01",
+      "to": "domain:S01_REMPLISSAGE_CHAMPS_DATE_04"
+    },
+    {
+      "from": "domain:S01_REMPLISSAGE_CHAMPS_DATE_04",
+      "to": "domain:S01_REMPLISSAGE_CHAMPS_DATE_05"
+    },
+    {
+      "from": "domain:B00_COMMANDES",
+      "to": "domain:S03_COUVERTURE_CONTRAT_ACHAT_V01"
+    },
+    {
+      "from": "domain:S03_COUVERTURE_CONTRAT_ACHAT_V01",
+      "to": "domain:S03_COUVERTURE_CONTRAT_ACHAT_V03"
+    },
+    {
+      "from": "domain:S03_COUVERTURE_CONTRAT_ACHAT_V02",
+      "to": "domain:S03_COUVERTURE_CONTRAT_ACHAT_V03"
+    },
+    {
+      "from": "domain:H02_FACTURES",
+      "to": "story:71369433"
+    },
+    {
+      "from": "domain:H00_FACTURES",
+      "to": "story:71369433"
+    },
+    {
+      "from": "domain:H02_FACTURES",
+      "to": "story:36134915"
+    },
+    {
+      "from": "domain:B00_FACTURES",
+      "to": "story:60166453"
+    },
+    {
+      "from": "domain:H02_COMMANDES_OTD",
+      "to": "story:79313362"
+    },
+    {
+      "from": "domain:S02_EVOLUTION-OTD_V01",
+      "to": "story:79313362"
+    },
+    {
+      "from": "domain:H02_COMMANDES_OTD",
+      "to": "story:3483211"
+    },
+    {
+      "from": "domain:B01_COMMANDES_OTD",
+      "to": "story:62404476"
+    },
+    {
+      "from": "domain:B00_LITIGES",
+      "to": "story:85929451"
+    },
+    {
+      "from": "domain:H02_COMMANDES_OTD",
+      "to": "story:85929451"
+    },
+    {
+      "from": "domain:H03_LITIGES",
+      "to": "story:85929451"
+    },
+    {
+      "from": "domain:B00_LITIGES",
+      "to": "story:33831531"
+    },
+    {
+      "from": "domain:H02_FACTURES",
+      "to": "story:63581389"
+    },
+    {
+      "from": "domain:requester_depenses",
+      "to": "story:98010296"
+    },
+    {
+      "from": "domain:type",
+      "to": "story:98010296"
+    },
+    {
+      "from": "domain:DATASET_DEPENSES",
+      "to": "story:98010296"
+    },
+    {
+      "from": "domain:H02_FACTURES",
+      "to": "story:13742198"
+    },
+    {
+      "from": "domain:S01_REMPLISSAGE_CHAMPS_DATE_01",
+      "to": "story:13742198"
+    },
+    {
+      "from": "domain:S01_REMPLISSAGE_CHAMPS_DATE_04",
+      "to": "story:52406568"
+    }
+  ]
+}

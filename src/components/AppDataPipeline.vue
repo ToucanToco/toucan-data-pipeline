@@ -5,7 +5,7 @@
     <!--      :graph="BRAND_PERF_GRAPH"-->
     <!--      class="app-data-pipeline__viz"-->
     <!--    ></Cytoscape>-->
-    <Dagre :graph="BRAND_PERF_GRAPH"></Dagre>
+    <Dagre :graph="BI_ACHATS_GRAPH"></Dagre>
   </div>
 </template>
 
@@ -16,6 +16,9 @@ import Dagre from "@/components/Dagre.vue";
 
 import PAGINATION_GRAPH from "@/components/app-pagination.json";
 import BRAND_PERF_GRAPH from "@/components/app-brand-perf.json";
+import DRIVE_REPORTING_GRAPH from "@/components/app-drive-reporting.json";
+import BP_HP_GRAPH from "@/components/app-bp-hp.json";
+import BI_ACHATS_GRAPH from "@/components/app-bi-achats.json";
 
 export default Vue.extend({
   name: "AppDataPipeline",
@@ -35,6 +38,9 @@ export default Vue.extend({
     return {
       PAGINATION_GRAPH,
       BRAND_PERF_GRAPH,
+      DRIVE_REPORTING_GRAPH,
+      BP_HP_GRAPH,
+      BI_ACHATS_GRAPH,
     };
   },
 });
