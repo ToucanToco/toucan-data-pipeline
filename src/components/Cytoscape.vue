@@ -5,9 +5,9 @@
 <script lang="ts">
 import Vue, { PropType } from "vue";
 import cytoscape from "cytoscape";
-import cola from "cytoscape-cola";
+import dagre from "cytoscape-dagre";
 
-cytoscape.use(cola);
+cytoscape.use(dagre);
 
 export default Vue.extend({
   name: "Cytoscape",
@@ -86,46 +86,9 @@ export default Vue.extend({
 
       this.cyInstance
         .layout({
-          name: "cola",
-          // @ts-ignore
+          name: "dagre",
           animate: false,
-          maxSimulationTime: 4000,
-
-          // @ts-ignore
-          flow: { axis: "x", minSeparation: 250 },
-          nodeDimensionsIncludeLabels: true,
-
-          // @ts-ignore
-          alignment: {
-            vertical: [
-              // All providers and datasources should be aligned to the left
-              this.cyInstance
-                .nodes()
-                .filter((n) =>
-                  ["provider", "datasource"].includes(n.data("type"))
-                )
-                .map((n) => ({ node: n, offset: 0 })),
-            ],
-          },
-
-          gapInequalities: [
-            // Stories must be at the right side of providers and datasources
-            ...this.cyInstance
-              .filter('node[type = "story"]')
-              // @ts-ignore
-              .flatMap((storyNode) => {
-                return this.cyInstance
-                  .filter('node[type = "datasource"],node[type = "provider"]')
-                  .map((sourceNode) => {
-                    return {
-                      axis: "x",
-                      left: sourceNode,
-                      right: storyNode,
-                      gap: 500,
-                    };
-                  });
-              }),
-          ],
+          rankDir: "LR",
         })
         .run();
     },
