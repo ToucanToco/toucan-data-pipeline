@@ -170,7 +170,6 @@ export default Vue.extend({
     this.nodes = this.dagreGraph.nodes().map((id) => {
       const n = this.dagreGraph.node(id); // In layout graph
       const d = this.graph.nodes.find((d) => d.id == id); // In provided data
-      console.log(id);
       return {
         x: n.x,
         y: n.y,
