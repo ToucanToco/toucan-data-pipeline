@@ -12,24 +12,36 @@
         <polygon points="0 0, 10 3.5, 0 7" />
       </marker>
     </defs>
-    <line
-      :x1="x1"
-      :y1="y1"
-      :x2="x2"
-      :y2="y2"
+    <polyline
+      :points="polylinePoints"
+      fill="none"
       stroke="#000"
       stroke-width="1"
       marker-end="url(#arrowhead)"
-    />
+    ></polyline>
   </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+
+export default Vue.extend({
   name: "Edge",
 
-  props: ["x1", "x2", "y1", "y2"],
-};
+  props: {
+    points: {
+      type: Object as PropType<{ x: number; y: number }[]>,
+    },
+  },
+
+  computed: {
+    polylinePoints(): string {
+      return this.points
+        .map((p: { x: number; y: number }) => `${p.x},${p.y}`)
+        .join(" ");
+    },
+  },
+});
 </script>
 
 <style scoped></style>

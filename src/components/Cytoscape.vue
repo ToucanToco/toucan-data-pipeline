@@ -87,6 +87,7 @@ export default Vue.extend({
       this.cyInstance
         .layout({
           name: "dagre",
+          // @ts-ignore
           animate: false,
           rankDir: "LR",
         })
