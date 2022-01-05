@@ -13,7 +13,7 @@
       </marker>
     </defs>
     <path
-      :d="dTaxi"
+      :d="dQuadratic"
       fill="none"
       stroke="#000"
       stroke-width="1"
@@ -55,6 +55,13 @@ export default Vue.extend({
       L ${this.center.x} ${this.start.y}
       L ${this.center.x} ${this.end.y}
       L ${this.end.x} ${this.end.y}`;
+    },
+
+    // Quadratic curve rounding the taxi line
+    dQuadratic(): string {
+      return `M ${this.start.x} ${this.start.y}
+      Q ${this.center.x} ${this.start.y}, ${this.center.x} ${this.center.y}
+      Q ${this.center.x} ${this.end.y}, ${this.end.x} ${this.end.y}`;
     },
   },
 });
