@@ -1,24 +1,25 @@
 // Configuration of the different types of nodes
+// Includes borders
 const NODE_TYPES = {
   datasource: {
-    height: 60,
-    width: 60,
+    height: 72 + 1 * 2,
+    width: 72 + 1 * 2,
   },
   provider: {
-    height: 60,
-    width: 60,
+    height: 72 + 1 * 2,
+    width: 72 + 1 * 2,
   },
   domain: {
-    height: 60,
-    width: 150,
+    height: 48,
+    width: 160,
   },
   story: {
-    height: 60,
-    width: 60,
+    height: 48 + 4 * 2,
+    width: 91 + 4 * 2,
   },
   unknown: {
-    height: 30,
-    width: 30,
+    height: 30 + 1 * 2,
+    width: 30 + 1 * 2,
   },
 };
 export default NODE_TYPES;

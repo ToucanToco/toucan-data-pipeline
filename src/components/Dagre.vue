@@ -127,7 +127,7 @@ export default Vue.extend({
       rankdir: "LR",
       align: "UL",
       marginx: 20,
-      ranksep: 200,
+      ranksep: 60,
       // ranker: "tight-tree",
     });
 
