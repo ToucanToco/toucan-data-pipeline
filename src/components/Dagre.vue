@@ -7,7 +7,13 @@
       flex: width && height ? 'none' : undefined,
     }"
   >
-    <Edge class="edge" :key="e.id" :points="e.points" v-for="e in edges"></Edge>
+    <Edge
+      class="edge"
+      :key="e.id"
+      :start="e.start"
+      :end="e.end"
+      v-for="e in edges"
+    ></Edge>
     <Node
       class="node"
       :x="n.x"
@@ -48,7 +54,8 @@ export default Vue.extend({
     dagreGraph: dagre.graphlib.Graph;
     nodes: { x: number; y: number; id: string; label: string }[];
     edges: {
-      points: { x: number; y: number }[];
+      start: { x: number; y: number };
+      end: { x: number; y: number };
       id: string;
     }[];
     height?: number;
@@ -64,7 +71,8 @@ export default Vue.extend({
       dagreGraph: dagre.graphlib.Graph;
       nodes: { x: number; y: number; id: string; label: string }[];
       edges: {
-        points: { x: number; y: number }[];
+        start: { x: number; y: number };
+        end: { x: number; y: number };
         id: string;
       }[];
       height?: number;
@@ -118,8 +126,20 @@ export default Vue.extend({
 
     this.edges = this.dagreGraph.edges().map((id) => {
       const e = this.dagreGraph.edge(id);
+      const sourceNode = this.dagreGraph.node(id.v);
+      const targetNode = this.dagreGraph.node(id.w);
       return {
         points: e.points,
+        start: {
+          // Right of the source node
+          x: sourceNode.x + sourceNode.width / 2,
+          y: sourceNode.y,
+        },
+        end: {
+          // Left of the target node
+          x: targetNode.x - targetNode.width / 2,
+          y: targetNode.y,
+        },
         id: id.v + "->" + id.w,
       };
     });

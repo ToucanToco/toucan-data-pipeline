@@ -12,13 +12,13 @@
         <polygon points="0 0, 10 3.5, 0 7" />
       </marker>
     </defs>
-    <polyline
-      :points="polylinePoints"
+    <path
+      :d="dTaxi"
       fill="none"
       stroke="#000"
       stroke-width="1"
       marker-end="url(#arrowhead)"
-    ></polyline>
+    ></path>
   </svg>
 </template>
 
@@ -29,16 +29,32 @@ export default Vue.extend({
   name: "Edge",
 
   props: {
-    points: {
-      type: Object as PropType<{ x: number; y: number }[]>,
+    start: {
+      type: Object as PropType<{ x: number; y: number }>,
+    },
+    end: {
+      type: Object as PropType<{ x: number; y: number }>,
     },
   },
 
   computed: {
-    polylinePoints(): string {
-      return this.points
-        .map((p: { x: number; y: number }) => `${p.x},${p.y}`)
-        .join(" ");
+    dStraight(): string {
+      return `M ${this.start.x} ${this.start.y} L ${this.end.x} ${this.end.y}`;
+    },
+
+    center(): { x: number; y: number } {
+      return {
+        x: (this.end.x + this.start.x) / 2,
+        y: (this.end.y + this.start.y) / 2,
+      };
+    },
+
+    // 3-part line
+    dTaxi(): string {
+      return `M ${this.start.x} ${this.start.y}
+      L ${this.center.x} ${this.start.y}
+      L ${this.center.x} ${this.end.y}
+      L ${this.end.x} ${this.end.y}`;
     },
   },
 });
