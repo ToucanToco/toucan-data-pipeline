@@ -136,10 +136,11 @@ export default Vue.extend({
     });
 
     this.graph.nodes.forEach((n) => {
+      const nodeType = NODE_TYPES[n.type] || NODE_TYPES.unknown;
       this.dagreGraph.setNode(n.id, {
         label: n.name,
-        width: (NODE_TYPES[n.type] || NODE_TYPES.unknown).width,
-        height: (NODE_TYPES[n.type] || NODE_TYPES.unknown).height,
+        width: nodeType.width,
+        height: nodeType.height,
       });
     });
 
