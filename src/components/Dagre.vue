@@ -13,6 +13,9 @@
       :start="e.start"
       :end="e.end"
       v-for="e in edges"
+      :style="{
+        opacity: hasHighlighedNode ? (e.highlighted ? 1 : 0.3) : 1,
+      }"
     ></Edge>
     <Node
       class="node"
@@ -21,7 +24,13 @@
       :label="n.label"
       :key="n.id"
       v-for="n in nodes"
-      :style="{ top: n.y - 60 / 2 + 'px', left: n.x - 150 / 2 + 'px' }"
+      :style="{
+        top: n.y - 60 / 2 + 'px',
+        left: n.x - 150 / 2 + 'px',
+        opacity: hasHighlighedNode ? (n.highlighted ? 1 : 0.5) : 1,
+      }"
+      @mouseenter.native="highlightNode(n.id)"
+      @mouseleave.native="resetHighlight()"
     ></Node>
   </div>
 </template>
@@ -52,11 +61,18 @@ export default Vue.extend({
 
   data(): {
     dagreGraph: dagre.graphlib.Graph;
-    nodes: { x: number; y: number; id: string; label: string }[];
+    nodes: {
+      x: number;
+      y: number;
+      id: string;
+      label: string;
+      highlighted: boolean;
+    }[];
     edges: {
       start: { x: number; y: number };
       end: { x: number; y: number };
       id: string;
+      highlighted: boolean;
     }[];
     height?: number;
     width?: number;
@@ -69,15 +85,28 @@ export default Vue.extend({
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any as {
       dagreGraph: dagre.graphlib.Graph;
-      nodes: { x: number; y: number; id: string; label: string }[];
+      nodes: {
+        x: number;
+        y: number;
+        id: string;
+        label: string;
+        highlighted: boolean;
+      }[];
       edges: {
         start: { x: number; y: number };
         end: { x: number; y: number };
         id: string;
+        highlighted: boolean;
       }[];
       height?: number;
       width?: number;
     };
+  },
+
+  computed: {
+    hasHighlighedNode(): boolean {
+      return this.nodes.some((n) => n.highlighted);
+    },
   },
 
   created() {
@@ -121,6 +150,7 @@ export default Vue.extend({
         y: n.y,
         id: id,
         label: n.label as string,
+        highlighted: false,
       };
     });
 
@@ -141,8 +171,36 @@ export default Vue.extend({
           y: targetNode.y,
         },
         id: id.v + "->" + id.w,
+        highlighted: false,
       };
     });
+  },
+
+  methods: {
+    resetHighlight() {
+      console.log("resetHighlight");
+      this.nodes.forEach((n) => (n.highlighted = false));
+      this.edges.forEach((n) => (n.highlighted = false));
+    },
+
+    highlightNode(nodeId: string) {
+      const connectingEdges = (
+        this.dagreGraph.edges() as { v: string; w: string }[]
+      ).filter((e) => e.v === nodeId || e.w === nodeId);
+      const nodesToHighlight = Array.from(
+        new Set(
+          connectingEdges.flatMap((e: { v: string; w: string }) => [e.v, e.w])
+        )
+      );
+      this.nodes.forEach(
+        (n) => (n.highlighted = nodesToHighlight.includes(n.id))
+      );
+
+      const edgesToHighlight = connectingEdges.map((e) => e.v + "->" + e.w);
+      this.edges.forEach(
+        (e) => (e.highlighted = edgesToHighlight.includes(e.id))
+      );
+    },
   },
 });
 </script>
