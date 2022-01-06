@@ -138,7 +138,7 @@ export default Vue.extend({
     this.graph.nodes.forEach((n) => {
       const nodeType = NODE_TYPES[n.type] || NODE_TYPES.unknown;
       this.dagreGraph.setNode(n.id, {
-        label: n.name,
+        label: n.name || n.id.split(':')[1],
         width: nodeType.width,
         height: nodeType.height,
       });

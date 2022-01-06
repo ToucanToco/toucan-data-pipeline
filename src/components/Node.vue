@@ -82,8 +82,8 @@ export default Vue.extend({
   background-color: white;
 }
 .node.node--domain .icon {
-  margin-right: 11px;
-  background-color: #EEF3F7;
+  margin-right: 7.5px;
+  background-color: #eef3f7;
   border-radius: 50%;
   padding: 7.5px;
   flex: none;
@@ -96,6 +96,9 @@ export default Vue.extend({
   border-radius: 33px;
   border: 4px solid #edc002;
   background-color: #fffbeb;
+}
+.node.node--story .icon {
+  margin-right: 7.5px;
 }
 
 .label {
@@ -110,6 +113,7 @@ export default Vue.extend({
   flex: 1;
   text-overflow: ellipsis;
   overflow: hidden;
+  color: #6a6e80;
 }
 
 .label.label--below {
