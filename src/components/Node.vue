@@ -1,6 +1,10 @@
 <template>
   <div class="node" :class="`node--${type}`" :alt="label">
-    <div class="icon" aria-hidden="true"></div>
+    <div class="icon" aria-hidden="true">
+      <img src="@/assets/icon-file.svg" v-if="type === 'datasource'" />
+      <img src="@/assets/icon-dataset.svg" v-else-if="type === 'domain'" />
+      <img src="@/assets/icon-chart.svg" v-else-if="type === 'story'" />
+    </div>
     <div class="label" :class="`label--${labelPosition}`">
       {{ label }}
     </div>
@@ -51,6 +55,9 @@ export default Vue.extend({
   box-shadow: 0px 0px 12px 0px #0000000a;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 11px 13px;
+  box-sizing: border-box;
 }
 
 .node.node--unknown {
@@ -63,15 +70,26 @@ export default Vue.extend({
   background-color: #e7ebf3;
   border: 1px solid #d4dae6;
 }
+
 .node.node--provider {
   width: 72px;
   height: 72px;
 }
+
 .node.node--domain {
   width: 160px;
   height: 48px;
   background-color: white;
 }
+.node.node--domain .icon {
+  margin-right: 11px;
+  background-color: #EEF3F7;
+  border-radius: 50%;
+  padding: 7.5px;
+  flex: none;
+  display: flex;
+}
+
 .node.node--story {
   width: 91px;
   height: 48px;
@@ -104,5 +122,8 @@ export default Vue.extend({
   right: -10px;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.icon {
 }
 </style>
